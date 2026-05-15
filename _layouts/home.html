@@ -3,18 +3,24 @@ layout: default
 ---
 
 <section class="hero hero-reference">
-  <div class="container narrow">
-    <p class="eyebrow">기록 아카이브</p>
-    <h1 class="hero-title">배움은 지나가도 기록은 남습니다</h1>
-    <p class="hero-copy">
-      공부한 것과 앞으로 공부할 것을 마크다운으로 차곡차곡 정리합니다.
-    </p>
+  <div class="container hero-grid">
+    <div class="hero-copy-block">
+      <p class="eyebrow">기록 아카이브</p>
+      <h1 class="hero-title">배움은 지나가도 기록은 남습니다</h1>
+      <p class="hero-copy">
+        공부한 것과 앞으로 공부할 것을 마크다운으로 차곡차곡 정리합니다.
+      </p>
 
-    <div class="cta-row">
-      <a class="text-cta" href="#topics">기록 방식 보기</a>
-      <a class="text-cta" href="#recommended">먼저 읽어볼 글</a>
-      <a class="text-cta" href="{{ '/about/' | relative_url }}">블로그 소개 보기</a>
+      <div class="cta-row">
+        <a class="text-cta" href="#topics">기록 방식 보기</a>
+        <a class="text-cta" href="#recommended">먼저 읽어볼 글</a>
+        <a class="text-cta" href="{{ '/about/' | relative_url }}">블로그 소개 보기</a>
+      </div>
     </div>
+
+    <figure class="hero-visual-card">
+      <img src="{{ '/assets/images/hero-learning-archive.svg' | relative_url }}" alt="코드와 마크다운 노트를 함께 보며 AI를 공부하고 기록하는 개발자의 작업 공간 일러스트" class="hero-visual" />
+    </figure>
   </div>
 </section>
 
