@@ -36,8 +36,12 @@ excerpt: "이 글에서 다루는 핵심 내용을 한두 문장으로 적습니
 ## 이미지 넣기 예시
 ```html
 <figure>
-  <img src="{{ '/assets/images/posts/example-image.png' | relative_url }}" alt="이미지 설명" />
-  <figcaption>출처 또는 짧은 설명</figcaption>
+  <a href="{{ '/assets/images/posts/example-image.png' | relative_url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ '/assets/images/posts/example-image.png' | relative_url }}" alt="이미지 설명" />
+  </a>
+  <figcaption>
+    출처: <a href="https://example.com" target="_blank" rel="noopener noreferrer">원문 링크</a>
+  </figcaption>
 </figure>
 ```
 

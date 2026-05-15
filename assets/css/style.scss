@@ -520,10 +520,20 @@ mark {
   margin: 1.25rem auto;
   border-radius: 16px;
   border: 1px solid var(--line);
+  box-shadow: 0 18px 38px rgba(15, 17, 21, 0.08);
 }
 
 .prose p > img:only-child {
   margin: 1.5rem auto;
+}
+
+.prose figure > a {
+  display: block;
+  border-radius: 16px;
+}
+
+.prose figure > a:hover img {
+  box-shadow: 0 22px 44px rgba(15, 17, 21, 0.12);
 }
 
 .prose figure > img,
@@ -537,6 +547,12 @@ mark {
   font-size: 0.92rem;
   line-height: 1.6;
   text-align: center;
+}
+
+.prose figcaption a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 .prose code {
