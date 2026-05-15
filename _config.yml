@@ -1,0 +1,17 @@
+title: Code25Y
+email: thinkdiff@uuh.ulsan.kr
+description: >-
+  Code25Y is a GitHub Pages blog about code, experiments, ideas, and learning.
+baseurl: "/Code25Y"
+url: "https://songseungyul.github.io"
+lang: ko-KR
+timezone: Asia/Seoul
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+header_pages:
+  - about.md
+minima:
+  skin: auto
