@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem('theme');
+        var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -25,6 +33,7 @@
           <a href="{{ '/search/' | relative_url }}">Search</a>
           <a href="{{ '/#topics' | relative_url }}">Topics</a>
           <a href="{{ '/#recommended' | relative_url }}">Recommended</a>
+          <button class="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">🌙 다크</button>
           <a href="https://github.com/songseungyul/Code25Y">GitHub</a>
         </nav>
       </div>
@@ -40,5 +49,36 @@
         <p><a href="https://github.com/songseungyul">GitHub</a></p>
       </div>
     </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.querySelector('.theme-toggle');
+        if (!toggle) return;
+
+        function applyTheme(theme) {
+          root.setAttribute('data-theme', theme);
+          var isDark = theme === 'dark';
+          toggle.setAttribute('aria-pressed', String(isDark));
+          toggle.setAttribute('aria-label', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
+          toggle.textContent = isDark ? '☀️ 라이트' : '🌙 다크';
+        }
+
+        var savedTheme = localStorage.getItem('theme');
+        var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+        var initialTheme = savedTheme || (systemPrefersDark.matches ? 'dark' : 'light');
+        applyTheme(initialTheme);
+
+        toggle.addEventListener('click', function () {
+          var nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          localStorage.setItem('theme', nextTheme);
+          applyTheme(nextTheme);
+        });
+
+        systemPrefersDark.addEventListener('change', function (event) {
+          if (localStorage.getItem('theme')) return;
+          applyTheme(event.matches ? 'dark' : 'light');
+        });
+      })();
+    </script>
   </body>
 </html>
