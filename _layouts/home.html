@@ -111,7 +111,7 @@ layout: default
     <div class="collection-grid">
       <article class="collection-card">
         <div class="collection-header">
-          <h3>Study</h3>
+          <h3>공부한 것</h3>
           <a class="collection-more" href="{{ '/study/' | relative_url }}">전체 보기</a>
         </div>
         <ul class="mini-list">
@@ -121,14 +121,14 @@ layout: default
               <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
             {% endfor %}
           {% else %}
-            <li class="muted-item">아직 Study 글이 없습니다.</li>
+            <li class="muted-item">아직 공부한 것 글이 없습니다.</li>
           {% endif %}
         </ul>
       </article>
 
       <article class="collection-card">
         <div class="collection-header">
-          <h3>To Study</h3>
+          <h3>공부할 것</h3>
           <a class="collection-more" href="{{ '/to-study/' | relative_url }}">전체 보기</a>
         </div>
         <ul class="mini-list">
@@ -138,14 +138,14 @@ layout: default
               <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
             {% endfor %}
           {% else %}
-            <li class="muted-item">아직 To Study 글이 없습니다.</li>
+            <li class="muted-item">아직 공부할 것 글이 없습니다.</li>
           {% endif %}
         </ul>
       </article>
 
       <article class="collection-card">
         <div class="collection-header">
-          <h3>Notes</h3>
+          <h3>작업 메모</h3>
           <a class="collection-more" href="{{ '/notes/' | relative_url }}">전체 보기</a>
         </div>
         <ul class="mini-list">
@@ -155,7 +155,7 @@ layout: default
               <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
             {% endfor %}
           {% else %}
-            <li class="muted-item">아직 Notes 글이 없습니다.</li>
+            <li class="muted-item">아직 작업 메모 글이 없습니다.</li>
           {% endif %}
         </ul>
       </article>
