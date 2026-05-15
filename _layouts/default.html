@@ -28,12 +28,12 @@
           <p class="brand-tagline">배움은 지나가도 기록은 남습니다</p>
         </div>
         <nav class="nav-links">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about/' | relative_url }}">About</a>
-          <a href="{{ '/search/' | relative_url }}">Search</a>
-          <a href="{{ '/#topics' | relative_url }}">Topics</a>
-          <a href="{{ '/#recommended' | relative_url }}">Recommended</a>
-          <button class="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false">🌙 다크</button>
+          <a href="{{ '/' | relative_url }}">홈</a>
+          <a href="{{ '/about/' | relative_url }}">소개</a>
+          <a href="{{ '/search/' | relative_url }}">검색</a>
+          <a href="{{ '/#topics' | relative_url }}">주제</a>
+          <a href="{{ '/#recommended' | relative_url }}">추천 글</a>
+          <button class="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false" title="다크 모드로 전환">🌙</button>
           <a href="https://github.com/songseungyul/Code25Y">GitHub</a>
         </nav>
       </div>
@@ -60,7 +60,8 @@
           var isDark = theme === 'dark';
           toggle.setAttribute('aria-pressed', String(isDark));
           toggle.setAttribute('aria-label', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
-          toggle.textContent = isDark ? '☀️ 라이트' : '🌙 다크';
+          toggle.setAttribute('title', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
+          toggle.textContent = isDark ? '☀️' : '🌙';
         }
 
         var savedTheme = localStorage.getItem('theme');
