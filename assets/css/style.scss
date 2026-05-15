@@ -191,6 +191,15 @@ a:hover {
   font-weight: 500;
 }
 
+.topic-link {
+  margin: 0.85rem 0 0;
+}
+
+.topic-link a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .link-list,
 .principle-list,
 .plain-list,
@@ -230,6 +239,152 @@ a:hover {
 .page-content,
 .prose {
   font-size: 1rem;
+}
+
+.archive-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.archive-item {
+  padding: 1rem 0 1.15rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-empty {
+  color: var(--muted);
+}
+
+.archive-meta {
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.8rem;
+}
+
+.archive-title {
+  margin: 0;
+  font-size: 1.32rem;
+  letter-spacing: -0.03em;
+}
+
+.compact-title {
+  font-size: 1.14rem;
+}
+
+.archive-excerpt {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.search-shell {
+  margin-top: 1rem;
+}
+
+.search-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.search-input:focus {
+  outline: 2px solid rgba(31, 122, 101, 0.16);
+  border-color: var(--accent);
+}
+
+.search-help,
+.search-status {
+  color: var(--muted);
+}
+
+.search-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.95rem 0 0;
+}
+
+.filter-chip {
+  border: 1px solid var(--line-strong);
+  background: #fff;
+  color: var(--muted);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-chip.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.collection-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.collection-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  background: #fff;
+}
+
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.collection-header h3 {
+  margin: 0;
+  font-size: 1.12rem;
+}
+
+.collection-more,
+.mini-list a {
+  color: var(--accent);
+}
+
+.mini-list {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.mini-list li {
+  margin: 0.45rem 0;
+}
+
+.muted-item {
+  color: var(--muted);
+}
+
+mark {
+  background: #fff1a8;
+  color: inherit;
+  padding: 0 0.08rem;
+}
+
+.search-help {
+  margin: 0.6rem 0 0;
+}
+
+.search-status {
+  margin: 0.75rem 0 0;
 }
 
 .post-layout-grid {
