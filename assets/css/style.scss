@@ -507,6 +507,20 @@ mark {
   color: var(--blockquote-text);
 }
 
+.prose img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+}
+
+.prose p > img:only-child {
+  margin: 1.5rem auto;
+}
+
 .prose code {
   font-family: 'Geist Mono', ui-monospace, monospace;
   font-size: 0.92em;
