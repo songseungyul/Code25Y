@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Wave Terminal 정리: 무엇이 좋은지, 어떻게 쓰는지, 어디에 잘 맞는지"
-date: 2026-05-15 14:20:00 +0900
+date: 2026-05-15 13:40:00 +0900
 categories: [study, notes]
 excerpt: "Wave Terminal의 공식 사이트, 문서, 릴리즈 노트를 기준으로 핵심 기능과 사용 흐름을 정리했다."
 ---
