@@ -4,11 +4,12 @@
 :root {
   --bg: #ffffff;
   --text: #111111;
-  --muted: #555555;
-  --line: #e7e7e7;
+  --muted: #5a5a5a;
+  --line: #e6e6e6;
   --line-strong: #d8d8d8;
-  --accent: #0f766e;
-  --container: 860px;
+  --accent: #1f7a65;
+  --accent-soft: #f3fbf8;
+  --container: 920px;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.7;
+  line-height: 1.72;
   word-break: keep-all;
 }
 
@@ -43,7 +44,7 @@ a:hover {
 }
 
 .narrow {
-  max-width: 760px;
+  max-width: 780px;
 }
 
 .site-header {
@@ -52,38 +53,52 @@ a:hover {
 }
 
 .header-row {
-  min-height: 64px;
+  padding: 1rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+.brand-group {
+  min-width: 0;
 }
 
 .brand {
-  font-size: 1rem;
+  display: inline-block;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+}
+
+.brand-tagline {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  max-width: 36rem;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 
 .hero {
-  padding: 3.5rem 0 1.5rem;
+  padding: 3rem 0 1.5rem;
 }
 
 .eyebrow,
 .post-meta,
-.post-header-meta {
+.post-header-meta,
+.topic-status {
   margin: 0 0 0.75rem;
   color: var(--muted);
   font-family: 'Geist Mono', ui-monospace, monospace;
-  font-size: 0.78rem;
+  font-size: 0.77rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -93,27 +108,40 @@ a:hover {
 .page-title,
 .post-title {
   margin: 0;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
+  letter-spacing: -0.045em;
+  line-height: 1.22;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 4vw, 2.85rem);
 }
 
 .hero-copy,
+.intro-copy,
 .section-copy,
 .prose p,
 .prose li,
 .page-content,
-.post-list-item p,
-.site-footer p {
+.site-footer p,
+.topic-card p,
+.closing-copy {
   color: var(--muted);
 }
 
 .hero-copy {
   margin: 1rem 0 0;
-  max-width: 42rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+  margin-top: 1.35rem;
+}
+
+.text-cta {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .section {
@@ -121,45 +149,72 @@ a:hover {
 }
 
 .section-tight {
-  padding-top: 0.5rem;
-}
-
-.section-title.small {
-  font-size: 1.2rem;
+  padding-top: 0.25rem;
 }
 
 .section-heading-stack {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.plain-list {
-  margin: 0.75rem 0 0;
-  padding-left: 1.1rem;
-}
-
-.plain-list li {
-  margin: 0.45rem 0;
-}
-
-.post-list {
-  border-top: 1px solid var(--line);
-}
-
-.post-list-item {
-  padding: 1.2rem 0;
+.intro-block {
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--line);
 }
 
-.post-list-item h3 {
+.intro-copy {
+  margin: 0.85rem 0 0;
+}
+
+.topic-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-card {
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.topic-card h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.18rem;
+  font-size: 1.2rem;
   letter-spacing: -0.03em;
+}
+
+.topic-highlight {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  color: #333333;
+  font-weight: 500;
+}
+
+.link-list,
+.principle-list,
+.plain-list,
+.prose ul,
+.prose ol {
+  padding-left: 1.2rem;
+}
+
+.link-list {
+  margin: 0;
+}
+
+.link-list li,
+.principle-list li,
+.plain-list li {
+  margin: 0.55rem 0;
+}
+
+.link-list a {
+  color: #1d1d1d;
+}
+
+.closing-copy {
+  margin-top: 1rem;
 }
 
 .page-shell,
@@ -193,14 +248,9 @@ a:hover {
 }
 
 .prose h3 {
-  margin-top: 1.4rem;
+  margin-top: 1.35rem;
   margin-bottom: 0.55rem;
   font-size: 1.15rem;
-}
-
-.prose ul,
-.prose ol {
-  padding-left: 1.2rem;
 }
 
 .prose blockquote {
@@ -213,7 +263,7 @@ a:hover {
 .prose code {
   font-family: 'Geist Mono', ui-monospace, monospace;
   font-size: 0.92em;
-  background: #f5f5f5;
+  background: var(--accent-soft);
   padding: 0.1rem 0.3rem;
   border-radius: 4px;
 }
@@ -230,20 +280,14 @@ a:hover {
   font-size: 0.92rem;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   .header-row,
-  .footer-row,
-  .intro-grid {
-    grid-template-columns: 1fr;
+  .footer-row {
     display: grid;
-  }
-
-  .header-row {
-    min-height: auto;
-    padding: 0.85rem 0;
+    gap: 0.75rem;
   }
 
   .nav-links {
-    gap: 0.8rem;
+    justify-content: flex-start;
   }
 }

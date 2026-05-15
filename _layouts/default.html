@@ -15,11 +15,15 @@
   <body>
     <header class="site-header">
       <div class="container header-row">
-        <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <div class="brand-group">
+          <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <p class="brand-tagline">AI 자동화, 문서 제작, 작업 노트를 다시 꺼내 쓸 수 있게 정리하는 실전 개발 블로그</p>
+        </div>
         <nav class="nav-links">
           <a href="{{ '/' | relative_url }}">Home</a>
           <a href="{{ '/about/' | relative_url }}">About</a>
-          <a href="{{ '/#writing' | relative_url }}">Writing</a>
+          <a href="{{ '/#topics' | relative_url }}">Topics</a>
+          <a href="{{ '/#recommended' | relative_url }}">Recommended</a>
           <a href="https://github.com/songseungyul/Code25Y">GitHub</a>
         </nav>
       </div>
@@ -31,7 +35,7 @@
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <p>{{ site.title }} · Senior developer notes on architecture, automation, and maintainable systems.</p>
+        <p>{{ site.title }} · 짧아도 다음 작업에서 바로 다시 쓸 수 있는 기록을 남깁니다.</p>
         <p><a href="https://github.com/songseungyul">GitHub</a></p>
       </div>
     </footer>

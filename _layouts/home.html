@@ -2,57 +2,97 @@
 layout: default
 ---
 
-<section class="hero hero-simple">
+<section class="hero hero-reference">
   <div class="container narrow">
-    <p class="eyebrow">Code25Y</p>
-    <h1 class="hero-title">정보 전달 중심의 개발 기록</h1>
+    <p class="eyebrow">NOTE PIPELINE</p>
+    <h1 class="hero-title">생각한 것, 만들고 있는 것, 그리고 AI를 실제 일에 붙여보며 배운 것들.</h1>
     <p class="hero-copy">
-      아키텍처, 자동화, AI 활용, 운영 관점에서
-      실제로 다시 참고할 만한 내용을 짧고 명확하게 정리합니다.
+      Code25Y는 짧은 메모라도 다음 작업에서 바로 다시 꺼내 쓸 수 있게 남기는 작업형 블로그입니다.
+      실험한 것은 다시 따라갈 수 있게 정리하고, 좋았던 방식은 다음 작업의 기준으로 바꾸는 데 집중합니다.
     </p>
+
+    <div class="cta-row">
+      <a class="text-cta" href="#topics">자동화 기록 보기</a>
+      <a class="text-cta" href="#recommended">먼저 읽어볼 글</a>
+      <a class="text-cta" href="{{ '/about/' | relative_url }}">작업 기준 보기</a>
+    </div>
   </div>
 </section>
 
 <section class="section section-tight">
-  <div class="container narrow intro-grid">
-    <div>
-      <h2 class="section-title small">이 블로그에서 다루는 것</h2>
-      <ul class="plain-list">
-        <li>유지보수 가능한 설계</li>
-        <li>GitHub 기반 개발 워크플로</li>
-        <li>AI를 활용한 개발 자동화</li>
-        <li>운영과 배포 관점의 체크리스트</li>
-      </ul>
+  <div class="container narrow intro-block">
+    <h2 class="section-title">Code25Y</h2>
+    <p class="intro-copy">
+      짧게 써도 대충 쓰지 않고,
+      실험한 것은 다시 따라갈 수 있게 남기고,
+      좋았던 방식은 다음 작업에서 바로 꺼내 쓸 수 있게 정리하는 쪽을 지향합니다.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="topics">
+  <div class="container narrow">
+    <div class="section-heading-stack">
+      <p class="eyebrow">Topics</p>
+      <h2 class="section-title">이 블로그에서 다루는 것</h2>
     </div>
-    <div>
-      <h2 class="section-title small">기록 원칙</h2>
-      <ul class="plain-list">
-        <li>화려함보다 가독성</li>
-        <li>경험보다 기준까지 함께 기록</li>
-        <li>짧아도 다시 쓸 수 있게 작성</li>
-        <li>실무 적용 가능성을 우선</li>
-      </ul>
+
+    <div class="topic-grid">
+      <article class="topic-card">
+        <p class="topic-status">운영 중 · 1 post</p>
+        <h3>AI · 자동화</h3>
+        <p>Hermes, GitHub, 자동화 스크립트, AI 워크플로처럼 실제 작업 흐름에 붙는 도구를 운영 기준으로 정리합니다.</p>
+        <p class="topic-highlight">대표 글 · 오래 가는 개발 기록을 남기는 이유</p>
+      </article>
+
+      <article class="topic-card">
+        <p class="topic-status">정리 중</p>
+        <h3>문서 · 전달</h3>
+        <p>개발 문서, 실행 계획, 결과 공유처럼 읽는 사람이 바로 이해하고 다시 쓸 수 있는 전달 방식을 쌓습니다.</p>
+        <p class="topic-highlight">준비 중 · 실무 문서 구조화 기준</p>
+      </article>
+
+      <article class="topic-card">
+        <p class="topic-status">운영 준비 중</p>
+        <h3>작업 노트</h3>
+        <p>짧은 판단, 체크리스트, 운영 메모처럼 다음 작업에서 바로 꺼내 쓰는 기록을 모읍니다.</p>
+        <p class="topic-highlight">준비 중 · 자동화 작업 루틴</p>
+      </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="writing">
+<section class="section" id="recommended">
   <div class="container narrow">
     <div class="section-heading-stack">
-      <p class="eyebrow">Latest Writing</p>
-      <h2 class="section-title">최신 글</h2>
-      <p class="section-copy">새 글부터 빠르게 훑어볼 수 있도록 단순한 목록 형태로 정리합니다.</p>
+      <p class="eyebrow">Recommended</p>
+      <h2 class="section-title">먼저 읽어보면 좋은 글</h2>
     </div>
 
-    <div class="post-list">
-      {% assign latest_posts = site.posts | slice: 0, 10 %}
+    <ul class="link-list">
+      {% assign latest_posts = site.posts | slice: 0, 5 %}
       {% for post in latest_posts %}
-        <article class="post-list-item">
-          <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | join: " / " }}</p>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 170 }}</p>
-        </article>
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
       {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <div class="section-heading-stack">
+      <p class="eyebrow">Principles</p>
+      <h2 class="section-title">이 블로그의 기준</h2>
     </div>
+
+    <ul class="principle-list">
+      <li>다음 작업에서 바로 다시 꺼내 쓸 수 있는 기록 남기기</li>
+      <li>시행착오도 숨기지 않고 정리하기</li>
+      <li>보기 좋은 결과물과 실제 쓰임을 같이 챙기기</li>
+    </ul>
+
+    <p class="closing-copy">천천히 쌓이더라도, 분명하게 쓸모 있는 글을 목표로 합니다.</p>
   </div>
 </section>
