@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "autopreso 정리: 말하는 대로 화이트보드를 그려주는 AI 발표 도우미"
-date: 2026-05-15 16:05:00 +0900
+date: 2026-05-15 16:00:00 +0900
 categories: [study, notes]
 excerpt: "lilys.ai의 autopreso 리포트를 바탕으로, 음성으로 화이트보드를 제어하는 AI 발표 도구의 개념과 설치 방법, 동작 구조를 다시 정리했다."
 ---
