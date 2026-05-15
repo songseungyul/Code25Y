@@ -507,10 +507,15 @@ mark {
   color: var(--blockquote-text);
 }
 
+.prose figure {
+  margin: 1.6rem auto;
+  max-width: 640px;
+}
+
 .prose img {
   display: block;
   width: 100%;
-  max-width: 720px;
+  max-width: 640px;
   height: auto;
   margin: 1.25rem auto;
   border-radius: 16px;
@@ -519,6 +524,19 @@ mark {
 
 .prose p > img:only-child {
   margin: 1.5rem auto;
+}
+
+.prose figure > img,
+.prose figure > a > img {
+  margin: 0 auto;
+}
+
+.prose figcaption {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .prose code {

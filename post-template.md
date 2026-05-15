@@ -33,6 +33,14 @@ excerpt: "이 글에서 다루는 핵심 내용을 한두 문장으로 적습니
 - [문서 또는 글 제목](https://example.com)
 - [추가 참고 자료](https://example.com)
 
+## 이미지 넣기 예시
+```html
+<figure>
+  <img src="{{ '/assets/images/posts/example-image.png' | relative_url }}" alt="이미지 설명" />
+  <figcaption>출처 또는 짧은 설명</figcaption>
+</figure>
+```
+
 ## 태그/카테고리 가이드
 - `study`: 공부한 내용을 정리한 글
 - `todo-study`: 앞으로 공부할 주제를 정리한 글
