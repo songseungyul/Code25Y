@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<article class="post-shell container">
+  <div class="post-header-block">
+    <p class="eyebrow">{{ page.categories | join: ' / ' }}</p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-header-meta">{{ page.date | date: "%Y.%m.%d" }} · {{ site.title }}</p>
+  </div>
+
+  <div class="post-layout-grid">
+    <aside class="post-aside">
+      <div class="post-aside-card">
+        <p class="panel-label">Reading Focus</p>
+        <ul>
+          <li>핵심 맥락</li>
+          <li>실무 적용 포인트</li>
+          <li>다음에 다시 쓸 기준</li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="post-content prose">
+      {{ content }}
+    </div>
+  </div>
+</article>

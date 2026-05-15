@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Senior Developer Blog</p>
+      <h1 class="hero-title">코드를 넘어서, <br />운영 가능한 시스템을 설계합니다.</h1>
+      <p class="hero-copy">
+        Code25Y는 제품을 오래 굴려본 개발자의 시선으로
+        아키텍처, 자동화, AI 활용, 그리고 실제 의사결정의 기준을 정리하는 공간입니다.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#writing">최신 글 보기</a>
+        <a class="button button-secondary" href="{{ '/about/' | relative_url }}">소개 보기</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <p class="panel-label">Operating Principles</p>
+      <ul class="principles-list">
+        <li><span>01</span> 단기 유행보다 유지보수성을 우선합니다.</li>
+        <li><span>02</span> 자동화는 사람을 대체하기보다 판단을 증폭해야 합니다.</li>
+        <li><span>03</span> 좋은 시스템은 빠른 기능보다 명확한 기준에서 나옵니다.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-plain">
+  <div class="container stats-grid">
+    <article class="stat-card">
+      <p class="panel-label">Primary Themes</p>
+      <h2>Architecture & Delivery</h2>
+      <p>서비스 구조, 코드베이스 품질, 배포와 운영 관점에서 남는 내용을 기록합니다.</p>
+    </article>
+    <article class="stat-card">
+      <p class="panel-label accent-blue">Tooling</p>
+      <h2>AI + Productivity</h2>
+      <p>개발자의 생산성을 높이는 워크플로와 도구 조합을 실험하고 정리합니다.</p>
+    </article>
+    <article class="stat-card">
+      <p class="panel-label accent-pink">Practical Writing</p>
+      <h2>Decision Notes</h2>
+      <p>왜 이런 선택을 했는지, 어떤 기준으로 버렸는지까지 남기는 블로그를 지향합니다.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="writing">
+  <div class="container section-heading-row">
+    <div>
+      <p class="eyebrow">Latest Writing</p>
+      <h2 class="section-title">최신 글</h2>
+    </div>
+    <p class="section-copy">짧더라도 실무에 다시 꺼내 쓸 수 있는 글을 쌓아갑니다.</p>
+  </div>
+
+  <div class="post-grid">
+    {% assign latest_posts = site.posts | slice: 0, 6 %}
+    {% for post in latest_posts %}
+      <article class="post-card">
+        <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | join: " / " }}</p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        <a class="post-link" href="{{ post.url | relative_url }}">Read note →</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-plain">
+  <div class="container philosophy-grid">
+    <div>
+      <p class="eyebrow">What to Expect</p>
+      <h2 class="section-title">이 블로그에서 다룰 것들</h2>
+    </div>
+    <div class="philosophy-list">
+      <article>
+        <h3>설계</h3>
+        <p>기능 구현보다 경계 설정, 책임 분리, 확장 가능한 구조를 우선합니다.</p>
+      </article>
+      <article>
+        <h3>운영</h3>
+        <p>장애를 줄이는 체크리스트, 배포 전략, 관찰 가능성 같은 운영 관점을 다룹니다.</p>
+      </article>
+      <article>
+        <h3>자동화</h3>
+        <p>AI와 스크립트가 반복 작업을 대신하게 하되, 결정권은 사람이 쥐는 방식을 지향합니다.</p>
+      </article>
+    </div>
+  </div>
+</section>

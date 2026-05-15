@@ -1,12 +1,511 @@
+---
+---
+
+:root {
+  --bg: #0b0b0c;
+  --bg-soft: #111214;
+  --panel: #15171a;
+  --panel-2: #0f1012;
+  --text: #f5f5f6;
+  --muted: #a1a1aa;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --blue: #0a72ef;
+  --pink: #de1d8d;
+  --green: #2fbf71;
+  --shadow: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 18px 40px rgba(0, 0, 0, 0.28);
+  --radius: 18px;
+  --container: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  font-family: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: 'liga' 1;
+  background:
+    radial-gradient(circle at top, rgba(10, 114, 239, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 0%, rgba(222, 29, 141, 0.12), transparent 25%),
+    linear-gradient(180deg, #09090b 0%, #0b0b0c 100%);
+  color: var(--text);
   word-break: keep-all;
+  line-height: 1.7;
 }
 
-.site-title {
+body,
+a,
+p,
+li,
+strong,
+em,
+small,
+span {
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(18px);
+  background: rgba(11, 11, 12, 0.7);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.85rem;
   font-weight: 700;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  background: linear-gradient(135deg, #171717, #2a2a2d 55%, #0a72ef 120%);
+  box-shadow: var(--shadow);
 }
 
-.post-content h2,
-.post-content h3 {
-  margin-top: 1.5rem;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 5.5rem 0 2rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.eyebrow,
+.panel-label,
+.post-meta,
+.post-header-meta {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #8ab8ff;
+  font-size: 0.78rem;
+}
+
+.hero-title,
+.section-title,
+.post-title,
+.page-title {
+  margin: 0;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 5.3rem);
+  max-width: 12ch;
+}
+
+.hero-copy,
+.section-copy,
+.footer-copy,
+.post-card p,
+.stat-card p,
+.philosophy-list p,
+.prose p,
+.prose li {
+  color: var(--muted);
+}
+
+.hero-copy {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #d9e8ff 0%, #0a72ef 120%);
+  box-shadow: 0 16px 34px rgba(10, 114, 239, 0.28);
+}
+
+.button-secondary {
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.hero-panel,
+.stat-card,
+.post-card,
+.post-aside-card,
+.page-content,
+.prose blockquote {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 1.35rem;
+}
+
+.panel-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.accent-blue {
+  color: #8ab8ff;
+}
+
+.accent-pink {
+  color: #ff7fc6;
+}
+
+.principles-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.principles-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  color: #d7d7db;
+}
+
+.principles-list span {
+  color: #8ab8ff;
+  font-family: 'Geist Mono', ui-monospace, monospace;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+}
+
+.section-plain {
+  padding-top: 1rem;
+}
+
+.stats-grid,
+.post-grid,
+.philosophy-grid,
+.footer-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card,
+.post-card {
+  padding: 1.35rem;
+}
+
+.stat-card h2,
+.post-card h3,
+.philosophy-list h3,
+.prose h2,
+.prose h3 {
+  margin: 0 0 0.8rem;
+  letter-spacing: -0.04em;
+}
+
+.stat-card h2,
+.section-title,
+.page-title,
+.post-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.section-copy {
+  max-width: 28rem;
+  margin: 0;
+}
+
+.post-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.post-meta,
+.post-header-meta {
+  margin: 0 0 0.9rem;
+  font-size: 0.74rem;
+  color: #8ab8ff;
+}
+
+.post-card h3 {
+  font-size: 1.35rem;
+}
+
+.post-card h3 a:hover,
+.post-link:hover,
+.prose a:hover,
+.footer-list a:hover {
+  color: #8ab8ff;
+}
+
+.post-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.philosophy-grid {
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+}
+
+.philosophy-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.philosophy-list article {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-shell,
+.post-shell {
+  padding: 4rem 0 5rem;
+}
+
+.page-header-block,
+.post-header-block {
+  margin-bottom: 2rem;
+}
+
+.page-content,
+.post-layout-grid {
+  padding: 1.5rem;
+}
+
+.post-layout-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 1.5rem;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.post-aside {
+  position: relative;
+}
+
+.post-aside-card {
+  position: sticky;
+  top: 100px;
+  padding: 1.2rem;
+}
+
+.post-aside-card ul {
+  padding-left: 1rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.prose {
+  min-width: 0;
+}
+
+.page-content,
+.prose {
+  padding: 1.6rem 1.75rem;
+}
+
+.prose {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.prose h2 {
+  margin-top: 2rem;
+  font-size: 1.7rem;
+}
+
+.prose h3 {
+  margin-top: 1.4rem;
+  font-size: 1.25rem;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+}
+
+.prose code {
+  font-family: 'Geist Mono', ui-monospace, monospace;
+  font-size: 0.92em;
+  color: #a7d7ff;
+}
+
+.site-footer {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-grid {
+  grid-template-columns: 1.5fr 1fr 1fr;
+  align-items: start;
+}
+
+.footer-heading {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--muted);
+}
+
+@media (max-width: 920px) {
+  .hero-grid,
+  .stats-grid,
+  .post-grid,
+  .philosophy-grid,
+  .footer-grid,
+  .post-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading-row,
+  .nav-row {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .post-aside-card {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    max-width: 100%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .page-content,
+  .prose,
+  .hero-panel,
+  .stat-card,
+  .post-card {
+    padding: 1.1rem;
+  }
 }

@@ -4,7 +4,27 @@ title: About
 permalink: /about/
 ---
 
-**Code25Y**는 개발, 생산성, AI 활용, 배운 점을 기록하는 개인 블로그입니다.
+안녕하세요. **Code25Y**를 운영하는 Song seung yul입니다.
 
-작성자: Song seung yul  
-GitHub: [songseungyul](https://github.com/songseungyul)
+저는 단순히 코드를 작성하는 것보다, **오래 운영되는 시스템을 설계하고 개선하는 일**에 더 큰 관심이 있습니다.
+이 블로그는 기능 구현기보다 다음과 같은 질문에 답하기 위해 만들었습니다.
+
+## 이 블로그가 다루는 질문
+- 이 구조는 6개월 뒤에도 유지할 수 있는가?
+- 자동화는 팀의 판단력을 높이고 있는가, 아니면 복잡도만 늘리고 있는가?
+- 지금의 빠른 선택이 나중의 큰 비용이 되지 않는가?
+
+## 주로 쓰는 주제
+- 소프트웨어 아키텍처와 리팩터링
+- GitHub 기반 개발 워크플로
+- AI를 활용한 개발 자동화
+- 개발자 생산성과 운영 관점의 체크리스트
+
+## 블로그 운영 원칙
+1. 경험 없는 추상론보다 **실제 적용 가능한 기준**을 남깁니다.
+2. 화려한 기술 소개보다 **왜 이 선택을 했는지**를 설명합니다.
+3. 짧은 메모라도 나중에 다시 꺼내 쓸 수 있게 씁니다.
+
+## Links
+- GitHub: [songseungyul](https://github.com/songseungyul)
+- Blog Repo: [Code25Y](https://github.com/songseungyul/Code25Y)
