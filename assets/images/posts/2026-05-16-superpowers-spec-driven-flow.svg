@@ -1,0 +1,66 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#193B6B" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#2B6CE5"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="720" rx="28" fill="url(#bg)"/>
+
+  <text x="72" y="84" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="700">Superpowers가 강제하는 AI 개발 흐름</text>
+  <text x="72" y="122" fill="#5B6B85" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">바로 코딩하지 않고, 질문 → 스펙 → 계획 → 구현 → 검증 순서로 AI를 묶어 두는 것이 핵심이다.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="190" width="180" height="250" rx="26" fill="#FFFFFF" stroke="#D9E5FF"/>
+    <rect x="285" y="190" width="180" height="250" rx="26" fill="#FFFFFF" stroke="#D9E5FF"/>
+    <rect x="500" y="190" width="180" height="250" rx="26" fill="#FFFFFF" stroke="#D9E5FF"/>
+    <rect x="715" y="190" width="180" height="250" rx="26" fill="#FFFFFF" stroke="#D9E5FF"/>
+    <rect x="930" y="190" width="180" height="250" rx="26" fill="#FFFFFF" stroke="#D9E5FF"/>
+  </g>
+
+  <text x="102" y="238" fill="#2B6CE5" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">1. 질문</text>
+  <text x="102" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">Brainstorming</text>
+  <text x="102" y="328" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">로컬 저장?</text>
+  <text x="102" y="358" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">검색 필요?</text>
+  <text x="102" y="388" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">마크다운 지원?</text>
+
+  <text x="317" y="238" fill="#2B6CE5" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">2. 문서화</text>
+  <text x="317" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">Spec 작성</text>
+  <text x="317" y="328" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">요구사항 정리</text>
+  <text x="317" y="358" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">파일로 저장</text>
+  <text x="317" y="388" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">승인 후 진행</text>
+
+  <text x="532" y="238" fill="#2B6CE5" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">3. 계획</text>
+  <text x="532" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">Writing Plans</text>
+  <text x="532" y="328" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">작업 분해</text>
+  <text x="532" y="358" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">경로/검증 명시</text>
+  <text x="532" y="388" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">2~5분 단위</text>
+
+  <text x="747" y="238" fill="#2B6CE5" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">4. 구현</text>
+  <text x="747" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">Execute</text>
+  <text x="747" y="328" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">바로 코딩 금지</text>
+  <text x="747" y="358" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">스펙 기준 구현</text>
+  <text x="747" y="388" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">드리프트 억제</text>
+
+  <text x="962" y="238" fill="#2B6CE5" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">5. 검증</text>
+  <text x="962" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">Review</text>
+  <text x="962" y="328" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">스펙 준수 먼저</text>
+  <text x="962" y="358" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">그 다음 코드 품질</text>
+  <text x="962" y="388" fill="#536277" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="19">별도 서브에이전트</text>
+
+  <path d="M251 315H278" stroke="#2B6CE5" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M466 315H493" stroke="#2B6CE5" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M681 315H708" stroke="#2B6CE5" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M896 315H923" stroke="#2B6CE5" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="72" y="506" width="1038" height="136" rx="24" fill="#FFFFFF" stroke="#D9E5FF"/>
+  <text x="106" y="554" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="24" font-weight="700">왜 이 흐름이 중요했나</text>
+  <text x="106" y="596" fill="#4A5A70" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="21">글의 핵심은 “AI가 더 빨라진다”가 아니라 “AI가 사람과 더 잘 협업하게 된다”였다. Superpowers는 AI의 즉흥 코딩을 줄이고, 사람이 승인 가능한 문서와 단계로 바꿔 준다.</text>
+</svg>
