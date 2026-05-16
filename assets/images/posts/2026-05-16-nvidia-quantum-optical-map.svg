@@ -1,0 +1,65 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFA"/>
+      <stop offset="1" stop-color="#EEF7F4"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#11352D" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#1F7A65"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" rx="32" fill="url(#bg)"/>
+
+  <text x="70" y="88" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="700">AI · 양자컴퓨팅 · 광통신 연결 지도</text>
+  <text x="70" y="126" fill="#506169" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">영상에서 반복해서 나온 핵심: 계산 성능만이 아니라 오류 정정과 연결 인프라가 같이 발전해야 상용화가 가까워진다.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+    <rect x="450" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+    <rect x="830" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+  </g>
+
+  <text x="104" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">1. AI / GPU 레이어</text>
+  <text x="104" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">엔비디아가 강한 구간</text>
+  <text x="104" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 시뮬레이션</text>
+  <text x="104" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 오류 탐지 / 오류 정정 보조</text>
+  <text x="104" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• GPU-QPU 하이브리드 연결</text>
+  <text x="104" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">공식 자료 키워드</text>
+  <text x="104" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">CUDA-Q, NVQLink</text>
+  <text x="104" y="530" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">영상의 해석</text>
+  <text x="104" y="564" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">양자컴퓨터를 직접 만들지 않아도</text>
+  <text x="104" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">핵심 인프라 수혜자가 될 수 있음</text>
+
+  <text x="484" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">2. 병목 구간</text>
+  <text x="484" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">오류 정정 + 광통신</text>
+  <text x="484" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 큐비트 수가 늘수록 오류 증가</text>
+  <text x="484" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 구리선은 열 / 잡음 이슈</text>
+  <text x="484" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 레이저 광통신은 연결 확장에 유리</text>
+  <text x="484" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">인프라 관심 종목 맥락</text>
+  <text x="484" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">Marvell, AOI</text>
+  <text x="484" y="530" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">핵심 메시지</text>
+  <text x="484" y="564" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">연산 칩보다 연결 구조가</text>
+  <text x="484" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">시대 전환의 속도를 좌우할 수 있음</text>
+
+  <text x="864" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">3. QPU 레이어</text>
+  <text x="864" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">양자 하드웨어 플레이어</text>
+  <text x="864" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• IonQ: 네트워킹 기대</text>
+  <text x="864" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• Rigetti: 초전도 기반 속도 매력</text>
+  <text x="864" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 상용화는 아직 오류 정정이 관건</text>
+  <text x="864" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">주의할 점</text>
+  <text x="864" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">로드맵은 회사 발표 기준이며</text>
+  <text x="864" y="508" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">실제 상용화 시점은 달라질 수 있음</text>
+  <text x="864" y="560" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">남는 질문</text>
+  <text x="864" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">누가 먼저 ‘유용한 규모’에 도달할까?</text>
+
+  <path d="M372 395H438" stroke="#1F7A65" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M752 395H818" stroke="#1F7A65" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="86" y="646" width="1028" height="72" rx="22" fill="#E9F5F1" stroke="#D7EBE4"/>
+  <text x="116" y="690" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700">한 줄 정리</text>
+  <text x="266" y="690" fill="#465862" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22">이 영상은 ‘양자컴퓨터 종목’보다 먼저 ‘오류 정정·광연결·하이브리드 인프라’를 보라고 말하는 쪽에 가깝다.</text>
+</svg>
