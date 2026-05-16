@@ -1,0 +1,65 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFA"/>
+      <stop offset="1" stop-color="#EEF6F3"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#12362E" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#1F7A65"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" rx="30" fill="url(#bg)"/>
+
+  <text x="70" y="84" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="700">hermes-desktop 구조 한 장 요약</text>
+  <text x="70" y="122" fill="#586973" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">읽고 나서 남는 핵심은 단순하다. Hermes CLI를 감싼 Electron GUI이지만, 단순 채팅 앱이 아니라 설치·프로필·스킬·메모리·게이트웨이까지 관리한다.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+    <rect x="450" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+    <rect x="830" y="180" width="300" height="430" rx="28" fill="#FFFFFF" stroke="#DCEBE6"/>
+  </g>
+
+  <text x="104" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">1. 사용자에게 보이는 층</text>
+  <text x="104" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">React 화면들</text>
+  <text x="104" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• Chat / Sessions / Agents</text>
+  <text x="104" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• Skills / Memory / Soul / Tools</text>
+  <text x="104" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• Schedules / Gateway / Office</text>
+  <text x="104" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">인상적인 점</text>
+  <text x="104" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">단순 채팅창이 아니라</text>
+  <text x="104" y="508" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">Hermes 운영 UI 전체를 노린다</text>
+  <text x="104" y="560" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">기술</text>
+  <text x="104" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">React 19 + Tailwind + electron-vite</text>
+
+  <text x="484" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">2. Electron 브리지 층</text>
+  <text x="484" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">main / preload / IPC</text>
+  <text x="484" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 설치, 업데이트, 백업</text>
+  <text x="484" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 세션 조회, 모델 설정, 크론 작업</text>
+  <text x="484" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 게이트웨이, SSH 터널, Claw3d</text>
+  <text x="484" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">보안 쪽 메모</text>
+  <text x="484" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">contextIsolation / sandbox / webSecurity</text>
+  <text x="484" y="530" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">의미</text>
+  <text x="484" y="564" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">CLI를 직접 두드리는 대신</text>
+  <text x="484" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">기능을 화면에서 조작하게 만든다</text>
+
+  <text x="864" y="232" fill="#1F7A65" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">3. Hermes 연결 방식</text>
+  <text x="864" y="276" fill="#111111" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">local / remote / ssh</text>
+  <text x="864" y="324" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• local: 127.0.0.1:8642</text>
+  <text x="864" y="358" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• remote: URL + API key</text>
+  <text x="864" y="392" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• ssh: 원격 Hermes를 터널로 붙임</text>
+  <text x="864" y="444" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">저장/상태 관리</text>
+  <text x="864" y="478" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">~/.hermes, SQLite, 세션 캐시,</text>
+  <text x="864" y="508" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">프로필 분리, i18n 번역 파일</text>
+  <text x="864" y="560" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">눈에 띈 점</text>
+  <text x="864" y="594" fill="#51616A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">‘대화 앱’보다 ‘운영 콘솔’에 가깝다</text>
+
+  <path d="M372 395H438" stroke="#1F7A65" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M752 395H818" stroke="#1F7A65" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="84" y="648" width="1032" height="70" rx="22" fill="#EAF5F1" stroke="#D8EAE4"/>
+  <text x="116" y="691" fill="#0F1720" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22" font-weight="700">한 줄 해석</text>
+  <text x="266" y="691" fill="#4C5E67" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="22">Hermes를 더 쉽게 쓰게 해 주는 GUI를 넘어서, 설치부터 원격 연결과 스케줄링까지 품으려는 데스크톱 프런트엔드다.</text>
+</svg>
