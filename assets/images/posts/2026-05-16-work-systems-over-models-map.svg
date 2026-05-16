@@ -1,0 +1,64 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="760" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#16345A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0 0L12 6L0 12V0Z" fill="#2563EB"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" rx="30" fill="url(#bg)"/>
+
+  <text x="72" y="84" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="34" font-weight="700">모델 중심에서 작업 시스템 중심으로</text>
+  <text x="72" y="122" fill="#5B6B85" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">이번 커뮤니티 학습 글의 핵심은 “어느 모델이 더 낫나”보다 “AI를 어떻게 연결·운영·검수할 것인가”가 더 중요해졌다는 점이다.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="188" width="250" height="470" rx="26" fill="#FFFFFF" stroke="#D7E6FF"/>
+    <rect x="474" y="188" width="250" height="470" rx="26" fill="#FFFFFF" stroke="#D7E6FF"/>
+    <rect x="870" y="188" width="250" height="470" rx="26" fill="#FFFFFF" stroke="#D7E6FF"/>
+  </g>
+
+  <text x="112" y="238" fill="#2563EB" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">과거 질문</text>
+  <text x="112" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">어느 모델이 더 좋은가</text>
+  <text x="112" y="336" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 누가 더 똑똑한 답을 하나</text>
+  <text x="112" y="370" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 누가 더 잘 쓰나</text>
+  <text x="112" y="404" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 속도/성능 비교</text>
+  <text x="112" y="470" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">한계</text>
+  <text x="112" y="504" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">답변 품질만으로는</text>
+  <text x="112" y="534" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">실제 일을 끝내기 어렵다</text>
+
+  <text x="508" y="238" fill="#2563EB" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">지금 핵심</text>
+  <text x="508" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">작업 시스템 설계</text>
+  <text x="508" y="336" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 목표 기반 작업 루프</text>
+  <text x="508" y="370" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 개인 런타임 통제</text>
+  <text x="508" y="404" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• MCP/브라우저 연결</text>
+  <text x="508" y="438" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 지식 재사용 구조</text>
+  <text x="508" y="472" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 문서 포맷 준수</text>
+  <text x="508" y="506" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 로컬 환경 재구성</text>
+  <text x="508" y="572" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">대표 묶음</text>
+  <text x="508" y="606" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">Codex / Claude Code / Hermes /</text>
+  <text x="508" y="636" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">MCP / NotebookLM / HWPX 자동화</text>
+
+  <text x="904" y="238" fill="#2563EB" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">앞으로 보는 기준</text>
+  <text x="904" y="282" fill="#111827" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="28" font-weight="700">연결·저장·운영·검수</text>
+  <text x="904" y="336" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 목표 수행 가능한가</text>
+  <text x="904" y="370" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 외부 도구를 다루는가</text>
+  <text x="904" y="404" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 기억과 자료가 축적되는가</text>
+  <text x="904" y="438" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 형식 맞춘 결과물이 나오는가</text>
+  <text x="904" y="472" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">• 사람이 검수 가능한가</text>
+  <text x="904" y="538" fill="#0F172A" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18" font-weight="700">한 줄 결론</text>
+  <text x="904" y="572" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">좋은 모델을 쓰는 것보다</text>
+  <text x="904" y="602" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">계속 부릴 수 있는 시스템을</text>
+  <text x="904" y="632" fill="#516273" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="20">만드는 쪽이 더 중요해진다</text>
+
+  <path d="M336 420H458" stroke="#2563EB" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M732 420H854" stroke="#2563EB" stroke-width="5" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <rect x="80" y="688" width="1040" height="38" rx="18" fill="#EAF2FF" stroke="#D7E6FF"/>
+  <text x="112" y="714" fill="#43556D" font-family="Inter, Pretendard, Apple SD Gothic Neo, sans-serif" font-size="18">정리 포인트: 이번 글은 60개 링크를 외우는 것보다, 그 안에서 반복되는 방향 전환을 읽는 데 가치가 있었다.</text>
+</svg>
