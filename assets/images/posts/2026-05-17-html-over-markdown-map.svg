@@ -1,0 +1,48 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" fill="#0f172a"/>
+  <rect x="60" y="52" width="1080" height="656" rx="28" fill="#111827" stroke="#334155"/>
+  <text x="84" y="108" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" font-weight="700">마크다운에서 HTML로: 영상이 말한 변화의 핵심</text>
+  <text x="84" y="144" fill="#94a3b8" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">읽기 어려운 긴 AI 산출물을, 더 잘 읽히는 브라우저용 결과물로 바꾸자는 제안</text>
+
+  <rect x="84" y="190" width="300" height="444" rx="24" fill="#1e293b" stroke="#475569"/>
+  <text x="110" y="234" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">기존 기본값</text>
+  <text x="110" y="272" fill="#38bdf8" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" font-weight="700">Markdown</text>
+  <text x="110" y="322" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 긴 문서가 되면 끝까지 안 읽기 쉬움</text>
+  <text x="110" y="362" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 색, 탭, 슬라이더, 인터랙션 표현 한계</text>
+  <text x="110" y="402" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 공유할 때 파일/깃허브 링크 중심</text>
+  <text x="110" y="442" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• AI가 시각적으로 설명하려 해도</text>
+  <text x="128" y="472" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">문자 흉내에 머무르기 쉬움</text>
+  <text x="110" y="532" fill="#fca5a5" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22" font-weight="700">문제</text>
+  <text x="110" y="568" fill="#fee2e2" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">AI가 만든 문서를 사람이 잘 소비하지</text>
+  <text x="110" y="598" fill="#fee2e2" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">못하면, 결국 판단 루프에서 사람이 빠진다</text>
+
+  <rect x="450" y="190" width="300" height="444" rx="24" fill="#1d4ed8" fill-opacity="0.14" stroke="#60a5fa"/>
+  <text x="476" y="234" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">새 제안</text>
+  <text x="476" y="272" fill="#7dd3fc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" font-weight="700">HTML</text>
+  <text x="476" y="322" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 레이아웃, 색, 도표, SVG 표현 가능</text>
+  <text x="476" y="362" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 모바일/브라우저에서 더 잘 읽힘</text>
+  <text x="476" y="402" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 링크 하나로 바로 공유 가능</text>
+  <text x="476" y="442" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 슬라이더/버튼 등 양방향 인터랙션 가능</text>
+  <text x="476" y="482" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 코드베이스/도구/MCP 데이터를</text>
+  <text x="494" y="512" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">한 페이지로 시각화하기 좋음</text>
+  <text x="476" y="572" fill="#bfdbfe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22" font-weight="700">실천 한 줄</text>
+  <text x="476" y="608" fill="#eff6ff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">프롬프트 끝에 “HTML로 만들어줘”를 붙여 본다</text>
+
+  <rect x="816" y="190" width="300" height="444" rx="24" fill="#14532d" fill-opacity="0.18" stroke="#4ade80"/>
+  <text x="842" y="234" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">활용 예시</text>
+  <text x="842" y="322" fill="#dcfce7" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">1. 스펙/계획 비교 페이지</text>
+  <text x="842" y="362" fill="#dcfce7" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">2. PR/코드리뷰 설명서</text>
+  <text x="842" y="402" fill="#dcfce7" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">3. 슬라이더가 있는 디자인 프로토타입</text>
+  <text x="842" y="442" fill="#dcfce7" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">4. 다이어그램 포함 리서치/인수인계 문서</text>
+  <text x="842" y="482" fill="#dcfce7" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">5. 드래그 가능한 1회성 커스텀 에디터</text>
+  <text x="842" y="542" fill="#86efac" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22" font-weight="700">주의점</text>
+  <text x="842" y="578" fill="#f0fdf4" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• 토큰 사용량과 응답 시간이 늘 수 있음</text>
+  <text x="842" y="608" fill="#f0fdf4" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">• HTML diff가 마크다운보다 지저분할 수 있음</text>
+
+  <path d="M390 412H438" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M756 412H804" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="438" cy="412" r="7" fill="#94a3b8"/>
+  <circle cx="756" cy="412" r="7" fill="#94a3b8"/>
+
+  <text x="84" y="680" fill="#64748b" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="16">출처: AgentOS 영상 자막을 바탕으로 다시 그린 요약도</text>
+</svg>
