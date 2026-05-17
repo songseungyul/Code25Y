@@ -1,0 +1,58 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" fill="#0b1220"/>
+  <rect x="52" y="44" width="1096" height="772" rx="28" fill="#111827" stroke="#334155"/>
+  <text x="82" y="98" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" font-weight="700">하네스 엔지니어링: AI 에이전트의 일하는 방식을 구조로 고정하는 법</text>
+  <text x="82" y="132" fill="#94a3b8" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">영상에서 설명한 Codex 기준 구성 요소와 실제 서비스 빌드 흐름을 한 장으로 다시 정리</text>
+
+  <rect x="82" y="170" width="1036" height="84" rx="20" fill="#172554" stroke="#60a5fa"/>
+  <text x="110" y="218" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">핵심 정의</text>
+  <text x="246" y="218" fill="#eff6ff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22">프롬프트만으로 부족한 부분을 규칙·기억·절차·도구·강제 로직으로 보완해</text>
+  <text x="246" y="246" fill="#eff6ff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="22">에이전트가 원하는 방식으로 반복 가능하게 일하도록 만드는 구조</text>
+
+  <text x="82" y="304" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">6가지 구성 요소</text>
+
+  <rect x="82" y="328" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="106" y="368" fill="#7dd3fc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">1. AGENTS.md</text>
+  <text x="106" y="404" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">항상 참고할 규칙 파일</text>
+  <text x="106" y="432" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">전역/프로젝트 단위로 관리</text>
+
+  <rect x="440" y="328" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="464" y="368" fill="#a7f3d0" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">2. 메모리</text>
+  <text x="464" y="404" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">선호/반복 맥락 재사용</text>
+  <text x="464" y="432" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">세션 사이 연결 고리</text>
+
+  <rect x="798" y="328" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="822" y="368" fill="#f9a8d4" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">3. 스킬</text>
+  <text x="822" y="404" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">반복 절차를 패키징한 워크플로우</text>
+  <text x="822" y="432" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">프롬프트 + 자료 + 스크립트</text>
+
+  <rect x="82" y="484" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="106" y="524" fill="#fde68a" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">4. MCP</text>
+  <text x="106" y="560" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">외부 시스템/도구 연결</text>
+  <text x="106" y="588" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">Slack, Gmail, 브라우저 등</text>
+
+  <rect x="440" y="484" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="464" y="524" fill="#fca5a5" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">5. 훅</text>
+  <text x="464" y="560" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">런타임 규칙 강제 / 가드레일</text>
+  <text x="464" y="588" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">읽기 규칙보다 강한 로직 기반 통제</text>
+
+  <rect x="798" y="484" width="320" height="132" rx="20" fill="#1f2937" stroke="#475569"/>
+  <text x="822" y="524" fill="#c4b5fd" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">6. 서브 에이전트</text>
+  <text x="822" y="560" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">독립 컨텍스트의 병렬 작업자</text>
+  <text x="822" y="588" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">전문 역할 분리와 검증용</text>
+
+  <text x="82" y="676" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">추천 구축 순서</text>
+  <path d="M120 724H1080" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="724" r="20" fill="#2563eb"/><text x="152" y="731" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">1</text>
+  <circle cx="360" cy="724" r="20" fill="#0ea5e9"/><text x="352" y="731" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">2</text>
+  <circle cx="560" cy="724" r="20" fill="#10b981"/><text x="552" y="731" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">3</text>
+  <circle cx="760" cy="724" r="20" fill="#f59e0b"/><text x="752" y="731" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">4</text>
+  <circle cx="960" cy="724" r="20" fill="#ef4444"/><text x="952" y="731" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">5</text>
+  <text x="110" y="772" fill="#bfdbfe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">규칙 정의</text>
+  <text x="291" y="772" fill="#bae6fd" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">반복 절차를 스킬화</text>
+  <text x="522" y="772" fill="#bbf7d0" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">외부 도구 연결</text>
+  <text x="708" y="772" fill="#fde68a" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">훅으로 강제</text>
+  <text x="905" y="772" fill="#fecaca" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">필요 시 병렬 위임</text>
+
+  <text x="82" y="806" fill="#64748b" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="16">출처: ‘Codex 마스터 클래스 1시간 편집본 | 하네스 설계부터 서비스 배포까지’ 영상 자막 기반 재구성</text>
+</svg>
