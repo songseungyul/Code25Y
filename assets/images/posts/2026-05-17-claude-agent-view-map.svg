@@ -1,0 +1,52 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" fill="#0b1220"/>
+  <rect x="56" y="46" width="1088" height="728" rx="28" fill="#111827" stroke="#334155"/>
+  <text x="84" y="102" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" font-weight="700">Claude Code Agent View: 여러 세션을 한 화면에서 운영하는 비동기 코딩 대시보드</text>
+  <text x="84" y="138" fill="#94a3b8" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">영상에서 강조한 핵심 기능, 추천 운용 패턴, 주의점 요약</text>
+
+  <rect x="84" y="176" width="1032" height="90" rx="20" fill="#172554" stroke="#60a5fa"/>
+  <text x="112" y="224" fill="#dbeafe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">핵심 정의</text>
+  <text x="246" y="224" fill="#eff6ff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="21">에이전트 뷰 = 돌아가는 Claude Code 세션들을 상태·요약·미리보기와 함께 한 화면에서 관리하는 대시보드</text>
+
+  <rect x="84" y="292" width="304" height="196" rx="22" fill="#1f2937" stroke="#475569"/>
+  <text x="108" y="332" fill="#7dd3fc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">무엇이 바뀌나</text>
+  <text x="108" y="372" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 실행 중 / 질문 중 / 완료 / PR 상태를 분류</text>
+  <text x="108" y="406" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 세션별 한 줄 요약 자동 갱신</text>
+  <text x="108" y="440" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• `peek`로 들어가지 않고 답변 가능</text>
+  <text x="108" y="474" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 터미널 중심 워크플로 유지</text>
+
+  <rect x="448" y="292" width="304" height="196" rx="22" fill="#1f2937" stroke="#475569"/>
+  <text x="472" y="332" fill="#a7f3d0" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">왜 강한가</text>
+  <text x="472" y="372" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 컨텍스트 전환 비용 감소</text>
+  <text x="472" y="406" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 워크트리 자동 격리로 충돌 완화</text>
+  <text x="472" y="440" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• GitHub/PR 확인까지 한 화면에서</text>
+  <text x="472" y="474" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 비동기 병렬 작업의 운영 도구 역할</text>
+
+  <rect x="812" y="292" width="304" height="196" rx="22" fill="#1f2937" stroke="#475569"/>
+  <text x="836" y="332" fill="#f9a8d4" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="24" font-weight="700">주의점</text>
+  <text x="836" y="372" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 세션 수가 많을수록 토큰 소비 급증</text>
+  <text x="836" y="406" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 자동 요약도 별도 비용 발생 가능</text>
+  <text x="836" y="440" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 10개 이상은 관리 비용이 커질 수 있음</text>
+  <text x="836" y="474" fill="#e5e7eb" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="19">• 처음엔 2~3개, 익숙해지면 확장</text>
+
+  <text x="84" y="546" fill="#f8fafc" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="700">추천 운용 패턴</text>
+  <path d="M122 596H1078" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="180" cy="596" r="22" fill="#2563eb"/><text x="171" y="603" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">1</text>
+  <circle cx="432" cy="596" r="22" fill="#0ea5e9"/><text x="423" y="603" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">2</text>
+  <circle cx="684" cy="596" r="22" fill="#10b981"/><text x="675" y="603" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">3</text>
+  <circle cx="936" cy="596" r="22" fill="#f59e0b"/><text x="927" y="603" fill="#fff" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18" font-weight="700">4</text>
+
+  <text x="112" y="650" fill="#bfdbfe" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">퇴근 전 백그라운드 작업 파견</text>
+  <text x="112" y="678" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">버그 조사 / 테스트 / 리팩토링을 밤새 병렬 실행</text>
+
+  <text x="344" y="650" fill="#bae6fd" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">4~8개 세션 사이 병렬 운영</text>
+  <text x="344" y="678" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">너무 많아지면 관리 비용이 이득을 잠식</text>
+
+  <text x="606" y="650" fill="#bbf7d0" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">세션 안 들어가고 peek 위주 관리</text>
+  <text x="606" y="678" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">컨텍스트 전환 최소화</text>
+
+  <text x="850" y="650" fill="#fde68a" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="20">같은 파일 안 건드리는 작업부터 시작</text>
+  <text x="850" y="678" fill="#cbd5e1" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="18">충돌 가능성 낮은 병렬 작업으로 학습</text>
+
+  <text x="84" y="734" fill="#64748b" font-family="Pretendard, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="16">출처: ‘AI 코딩 판이 바뀌었습니다. 클로드코드 에이전트뷰 직접 써봤습니다’ 영상 자막 기반 재구성</text>
+</svg>
