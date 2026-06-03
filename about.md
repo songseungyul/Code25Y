@@ -1,10 +1,17 @@
 ---
 layout: page
-title: About
+title: 소개
 permalink: /about/
 ---
 
 안녕하세요. **Code25Y**를 운영하는 Song seung yul입니다.
+
+<figure>
+  <a href="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}">
+    <img src="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}" alt="Code25Y를 운영하는 Song seung yul의 초상 일러스트" />
+  </a>
+  <figcaption>Code25Y 소개란에 사용하는 프로필 일러스트</figcaption>
+</figure>
 
 이 블로그는 제가 **공부한 것과 앞으로 공부할 것**을 마크다운으로 차곡차곡 쌓아두는 기록 공간입니다.
 완성된 글만 올리는 곳이라기보다, 배운 내용을 잊지 않기 위해 정리하고 다음에 이어서 볼 주제를 남겨두는 개인 노트 아카이브에 가깝습니다.
@@ -35,6 +42,6 @@ permalink: /about/
 - 새 글을 시작할 때는 [`post-template.md`]({{ '/post-template.md' | relative_url }})를 기준으로 쓰고 있습니다.
 - 공부한 것, 아직 헷갈리는 것, 나중에 더 볼 것까지 한 번에 기록할 수 있게 구성했습니다.
 
-## Links
+## 링크
 - GitHub: [songseungyul](https://github.com/songseungyul)
 - Blog Repo: [Code25Y](https://github.com/songseungyul/Code25Y)
