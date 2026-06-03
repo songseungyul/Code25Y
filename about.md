@@ -6,7 +6,7 @@ permalink: /about/
 
 안녕하세요. **Code25Y**를 운영하는 Song seung yul입니다.
 
-<figure>
+<figure class="profile-detail-figure">
   <a href="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}">
     <img src="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}" alt="Code25Y를 운영하는 Song seung yul의 초상 일러스트" />
   </a>

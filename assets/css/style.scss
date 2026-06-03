@@ -259,8 +259,8 @@ a:hover {
 
 .profile-card {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 1.4rem;
+  grid-template-columns: minmax(148px, 188px) minmax(0, 1fr);
+  gap: clamp(1rem, 2.8vw, 1.4rem);
   align-items: center;
   padding: 1.2rem;
   border: 1px solid var(--line);
@@ -271,16 +271,19 @@ a:hover {
 
 .profile-figure {
   margin: 0;
+  width: 100%;
 }
 
 .profile-image {
   display: block;
   width: 100%;
+  max-width: 188px;
   aspect-ratio: 29 / 35;
   object-fit: cover;
   border-radius: 18px;
   border: 1px solid var(--line);
   background: var(--surface);
+  margin: 0 auto;
 }
 
 .profile-copy-block {
@@ -308,6 +311,20 @@ a:hover {
 
 .profile-link {
   margin-top: 1rem;
+}
+
+.profile-detail-figure {
+  width: min(100%, 340px);
+  margin: 1.2rem auto 1.6rem;
+}
+
+.profile-detail-figure > a {
+  display: block;
+}
+
+.profile-detail-figure img {
+  width: 100%;
+  max-width: 340px;
 }
 
 .topic-grid {
@@ -729,10 +746,11 @@ pre code,
 
   .profile-card {
     grid-template-columns: 1fr;
+    justify-items: start;
   }
 
   .profile-figure {
-    max-width: 240px;
+    max-width: min(180px, 46vw);
   }
 
   .header-row,
