@@ -2,7 +2,8 @@
 layout: post
 title: "생존AI 영상 정리: 클로드/GPT 스킬은 왜 필요하고, 어떻게 만들어야 하는가"
 date: 2026-05-15 19:19:56 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-workflow, skill, claude, prompt]
 excerpt: "생존AI의 ‘클로드/GPT 스킬, 파일 3개면 끝’ 영상을 바탕으로 프롬프트와 스킬의 차이, 스킬 구조, 실제 제작 흐름을 정리했다."
 ---
 

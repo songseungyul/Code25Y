@@ -2,7 +2,8 @@
 layout: post
 title: "Graham Weaver 강연은 ‘하고 싶은 일을 찾으라’보다 ‘두려움이 줄이는 삶에서 나와 에너지가 향하는 쪽으로 지금 들어가라’에 더 가깝다"
 date: 2026-06-03 09:48:47 +0900
-categories: [study, notes]
+categories: [study]
+tags: [career, life, essay]
 excerpt: "유튜브 영상 ‘어차피 한번인데 맘대로 사세요 제발로’를 보며, Graham Weaver가 말한 세 가지 약속—문제를 직면하기, 에너지를 따르기, 지금 올인하기—를 다시 공부용 메모로 정리했다."
 ---
 

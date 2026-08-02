@@ -2,7 +2,8 @@
 layout: post
 title: "im-not-ai는 한국어 AI 문체를 ‘사람처럼 다시 읽히게’ 만드는 Claude Code용 윤문 파이프라인에 가깝다"
 date: 2026-05-30 23:14:36 +0900
-categories: [study, notes]
+categories: [study]
+tags: [korean-ai, claude-code, repo-notes]
 excerpt: "epoko77-ai/im-not-ai 저장소를 보며, 이 프로젝트를 단순 프롬프트가 아니라 한국어 AI 문체 탐지·윤문·검증을 분리한 Claude Code용 구조화 파이프라인으로 정리했다."
 ---
 

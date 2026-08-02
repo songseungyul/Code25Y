@@ -2,7 +2,8 @@
 layout: post
 title: "HBM 다음은 HBF일까: AI 반도체 병목을 메모리 관점에서 다시 정리"
 date: 2026-05-18 07:08:56 +0900
-categories: [study, notes]
+categories: [study]
+tags: [hardware, memory, ai-chip]
 excerpt: "언더스탠딩의 김정호 교수 강연을 바탕으로, AI 반도체 경쟁의 병목이 왜 GPU 자체보다 메모리 이동·패키징·냉각 쪽에 있는지, 그리고 HBF가 어떤 문제의식에서 나오는지 정리했다."
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title: "작업 시스템이 먼저다: 릴리스 60건 원문 전체 흐름 다시 정리"
 date: 2026-05-16 22:54:43 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-workflow, systems-thinking, career]
 excerpt: "GoodlookingProKim의 릴리스 60건 글을 처음부터 끝까지 다시 따라가며, 왜 AI 흐름의 중심이 모델 비교에서 작업 시스템 설계로 이동하는지 원문 구조에 맞춰 자세히 정리했다."
 ---
 

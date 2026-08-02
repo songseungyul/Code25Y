@@ -2,7 +2,8 @@
 layout: post
 title: "Claude Code Agent View가 바꾸는 것: 비동기 코딩 운영 방식 다시 정리"
 date: 2026-05-17 19:01:14 +0900
-categories: [study, notes]
+categories: [study]
+tags: [claude-code, ai-agent, agent-view]
 excerpt: "퍼널띵 영상 자막을 바탕으로, Claude Code의 Agent View가 왜 단순 UI 추가가 아니라 여러 에이전트 세션을 운영하는 방식 자체를 바꾸는지 학습용 메모로 정리했다."
 ---
 

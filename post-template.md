@@ -3,7 +3,9 @@ layout: post
 title: "제목을 여기에 적기"
 date: 2026-05-15 13:00:00 +0900
 categories: [study]
+tags: [주제-태그, 도구-태그]
 excerpt: "이 글에서 다루는 핵심 내용을 한두 문장으로 적습니다."
+# featured: true  # 홈 상단 추천 글에 노출하려면 이 줄을 활성화
 ---
 
 ## 한 줄 요약
@@ -45,10 +47,18 @@ excerpt: "이 글에서 다루는 핵심 내용을 한두 문장으로 적습니
 </figure>
 ```
 
-## 태그/카테고리 가이드
-- `study`: 공부한 내용을 정리한 글
+## 카테고리 가이드
+- `study`: 공부한 내용을 정리한 글 (대부분의 글)
 - `todo-study`: 앞으로 공부할 주제를 정리한 글
-- `notes`: 작업 메모나 짧은 기록
+
+카테고리는 **하나만** 지정합니다. 세부 주제는 `tags:` 로 분리합니다.
+
+## 태그 가이드
+자주 쓰는 태그 (일관성을 위해 재사용 우선):
+- 유형: `repo-notes`, `essay`, `blog-meta`
+- 주제: `ai-agent`, `ai-workflow`, `ai-tool`, `hardware`, `economy`, `career`
+- 제품: `claude-code`, `codex`, `hyperframes`, `wave-terminal`, ...
+- 기타: 필요한 태그를 새로 만들되 kebab-case로
 
 ## 파일명 예시
 `_posts/2026-05-15-my-note-title.md`

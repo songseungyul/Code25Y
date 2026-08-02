@@ -4,21 +4,20 @@ title: Search
 permalink: /search/
 ---
 
-게시된 글을 제목, 요약, 카테고리 기준으로 검색할 수 있습니다.
+게시된 글을 제목, 요약, 카테고리, 태그 기준으로 검색할 수 있습니다.
 
-<div class="search-shell">
+<form class="search-shell" role="search" onsubmit="return false">
   <label class="search-label" for="search-input">검색어</label>
-  <input id="search-input" class="search-input" type="search" placeholder="예: 마크다운, 자동화, 공부 노트" autocomplete="off" />
+  <input id="search-input" name="q" class="search-input" type="search" placeholder="예: codex, 하네스, 오케스트레이션" autocomplete="off" />
 
-  <div class="search-filter-row" aria-label="카테고리 필터">
-    <button type="button" class="filter-chip is-active" data-filter="all">전체</button>
-    <button type="button" class="filter-chip" data-filter="study">Study</button>
-    <button type="button" class="filter-chip" data-filter="todo-study">To Study</button>
-    <button type="button" class="filter-chip" data-filter="notes">Notes</button>
+  <div class="search-filter-row" role="group" aria-label="카테고리 필터">
+    <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">전체</button>
+    <button type="button" class="filter-chip" data-filter="study" aria-pressed="false">Study</button>
+    <button type="button" class="filter-chip" data-filter="todo-study" aria-pressed="false">To Study</button>
   </div>
 
-  <p class="search-help">두 글자 이상 입력하면 제목, 요약, 카테고리에서 바로 찾습니다.</p>
-  <p id="search-status" class="search-status">전체 글을 불러왔습니다.</p>
+  <p class="search-help">두 글자 이상 입력하면 제목·요약·카테고리·태그에서 바로 찾습니다.</p>
+  <p id="search-status" class="search-status" aria-live="polite">전체 글을 불러왔습니다.</p>
 
   <ul id="search-results" class="archive-list">
     {% for post in site.posts %}
@@ -27,13 +26,15 @@ permalink: /search/
         data-title="{{ post.title | downcase | escape }}"
         data-excerpt="{{ post.excerpt | strip_html | downcase | escape }}"
         data-categories="{{ post.categories | join: ' ' | downcase | escape }}"
+        data-tags="{{ post.tags | join: ' ' | downcase | escape }}"
         data-url="{{ post.url | relative_url }}"
         data-date="{{ post.date | date: '%Y.%m.%d' }}"
         data-title-raw="{{ post.title | escape }}"
         data-excerpt-raw="{{ post.excerpt | strip_html | escape }}"
         data-categories-raw="{{ post.categories | join: ' / ' | escape }}"
+        data-tags-raw="{{ post.tags | join: ', ' | escape }}"
       >
-        <p class="archive-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | join: " / " }}</p>
+        <p class="archive-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | join: " / " }}{% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}</p>
         <h2 class="archive-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         {% if post.excerpt %}
           <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
@@ -41,7 +42,7 @@ permalink: /search/
       </li>
     {% endfor %}
   </ul>
-</div>
+</form>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -54,22 +55,39 @@ permalink: /search/
         title: item.dataset.title || '',
         excerpt: item.dataset.excerpt || '',
         categories: item.dataset.categories || '',
+        tags: item.dataset.tags || '',
         titleRaw: item.dataset.titleRaw || '',
         excerptRaw: item.dataset.excerptRaw || '',
         categoriesRaw: item.dataset.categoriesRaw || '',
+        tagsRaw: item.dataset.tagsRaw || '',
         url: item.dataset.url || '#',
         date: item.dataset.date || '',
         element: item
       };
     });
 
-    var activeFilter = 'all';
     var filterLabels = {
       all: '전체',
       study: 'Study',
-      'todo-study': 'To Study',
-      notes: 'Notes'
+      'todo-study': 'To Study'
     };
+
+    var params = new URLSearchParams(window.location.search);
+    var initialQuery = params.get('q') || '';
+    var initialFilter = params.get('category') || 'all';
+    if (!filterLabels[initialFilter]) initialFilter = 'all';
+
+    var activeFilter = initialFilter;
+    input.value = initialQuery;
+    setActiveButton(activeFilter);
+
+    function setActiveButton(filter) {
+      buttons.forEach(function (btn) {
+        var active = btn.dataset.filter === filter;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      });
+    }
 
     function escapeHtml(text) {
       return text
@@ -91,13 +109,22 @@ permalink: /search/
       return safeText.replace(regex, '<mark>$1</mark>');
     }
 
+    function syncUrl(query) {
+      var next = new URLSearchParams();
+      if (query && query.length >= 2) next.set('q', query);
+      if (activeFilter !== 'all') next.set('category', activeFilter);
+      var qs = next.toString();
+      var newUrl = window.location.pathname + (qs ? '?' + qs : '');
+      window.history.replaceState(null, '', newUrl);
+    }
+
     function render() {
       var query = input.value.trim().toLowerCase();
       var visibleCount = 0;
       var html = '';
 
       items.forEach(function (item) {
-        var haystack = [item.title, item.excerpt, item.categories].join(' ');
+        var haystack = [item.title, item.excerpt, item.categories, item.tags].join(' ');
         var categoryMatched = activeFilter === 'all' || item.categories.split(' ').indexOf(activeFilter) !== -1;
         var queryMatched = query.length < 2 || haystack.indexOf(query) !== -1;
         var matched = categoryMatched && queryMatched;
@@ -105,8 +132,11 @@ permalink: /search/
         if (!matched) return;
         visibleCount += 1;
 
+        var meta = item.date + ' · ' + item.categoriesRaw;
+        if (item.tagsRaw) meta += ' · ' + item.tagsRaw;
+
         html += '<li class="archive-item">';
-        html += '<p class="archive-meta">' + escapeHtml(item.date + ' · ' + item.categoriesRaw) + '</p>';
+        html += '<p class="archive-meta">' + escapeHtml(meta) + '</p>';
         html += '<h2 class="archive-title"><a href="' + item.url + '">' + highlight(item.titleRaw, query) + '</a></h2>';
         if (item.excerptRaw) {
           html += '<p class="archive-excerpt">' + highlight(item.excerptRaw, query) + '</p>';
@@ -127,14 +157,14 @@ permalink: /search/
       } else {
         status.textContent = '"' + query + '" 검색 결과 ' + visibleCount + '개 · 필터: ' + filterLabels[activeFilter];
       }
+
+      syncUrl(query);
     }
 
     buttons.forEach(function (button) {
       button.addEventListener('click', function () {
         activeFilter = button.dataset.filter;
-        buttons.forEach(function (btn) {
-          btn.classList.toggle('is-active', btn === button);
-        });
+        setActiveButton(activeFilter);
         render();
       });
     });

@@ -2,8 +2,10 @@
 layout: post
 title: "하네스 엔지니어링은 결국 ‘좋은 모델’보다 ‘일하는 환경’을 설계하는 문제에 가깝다"
 date: 2026-06-04 00:41:53 +0900
-categories: [study, notes]
+categories: [study]
+tags: [harness-engineering, claude-code, codex, ai-workflow]
 excerpt: "패스트캠퍼스 영상 ‘하네스 엔지니어링 40분 개념 정리 | 클로드 코드 × 코덱스’를 바탕으로, 컨텍스트·도구·평가 루프와 사람의 역할을 중심으로 다시 공부용 메모를 남겼다."
+featured: true
 ---
 
 ## 한 줄 요약

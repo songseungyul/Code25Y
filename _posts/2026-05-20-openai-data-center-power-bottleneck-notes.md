@@ -2,7 +2,8 @@
 layout: post
 title: "AI 인프라 경쟁의 병목은 GPU보다 전기일 수 있다는 말이 계속 남았다"
 date: 2026-05-20 17:58:00 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-infra, energy, openai]
 excerpt: "유튜브 쇼츠 '“오픈AI 위기설” 데이터센터 비용도 못 낸다 조만간 AI 위기 올 겁니다'를 보고, AI 경쟁에서 진짜 병목이 모델 자체보다 전력·변압기·데이터센터 인프라일 수 있다는 포인트를 짧게 정리했다."
 ---
 

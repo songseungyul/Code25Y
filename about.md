@@ -39,7 +39,7 @@ permalink: /about/
 - 작업 과정에서 남겨둘 만한 짧은 정리
 
 ## 글을 쓰는 템플릿
-- 새 글을 시작할 때는 [`post-template.md`]({{ '/post-template.md' | relative_url }})를 기준으로 쓰고 있습니다.
+- 새 글을 시작할 때는 저장소의 [`post-template.md`](https://github.com/songseungyul/Code25Y/blob/main/post-template.md)를 기준으로 쓰고 있습니다.
 - 공부한 것, 아직 헷갈리는 것, 나중에 더 볼 것까지 한 번에 기록할 수 있게 구성했습니다.
 
 ## 링크

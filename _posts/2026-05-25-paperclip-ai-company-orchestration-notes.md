@@ -2,7 +2,8 @@
 layout: post
 title: "Paperclip은 에이전트 한 명보다 ‘회사를 운영하는 제어판’에 가깝다는 점이 핵심이었다"
 date: 2026-05-25 22:05:25 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-agent, paperclip, orchestration]
 excerpt: "유튜브 영상 '모르면 진짜 개손해... AI로 회사 운영 해주는 Paper Clip. 심지어 무료 오픈소스'를 보고, Paperclip을 단순 멀티 에이전트 툴이 아니라 목표·조직도·승인·예산까지 붙은 운영 레이어로 다시 정리했다."
 ---
 

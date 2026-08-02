@@ -2,7 +2,8 @@
 layout: post
 title: "Kminer2053/public-doc-to-hwpx를 읽고 정리한 메모: 공공기관 문체와 HWPX 양식을 같이 다루려는 시도"
 date: 2026-08-02 15:49:25 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, hwpx, korean-ai]
 excerpt: "Kminer2053/public-doc-to-hwpx 저장소를 읽고, 이 프로젝트가 단순 HWPX 생성기가 아니라 공공기관 보고서 문체 원칙과 양식 보존을 함께 다루는 도구라는 점을 중심으로 정리했다."
 ---
 

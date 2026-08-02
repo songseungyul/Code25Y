@@ -2,7 +2,8 @@
 layout: post
 title: "Egonex-AI/Understand-Anything를 읽고 정리한 메모: 코드베이스를 지식 그래프로 바꿔서 배우는 방식"
 date: 2026-08-02 15:29:31 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, code-analysis, knowledge-graph]
 excerpt: "Egonex-AI/Understand-Anything 저장소의 README와 CLAUDE.md, 구조 문서를 바탕으로 이 프로젝트가 왜 단순 코드 시각화가 아니라 온보딩과 이해를 위한 지식 그래프 도구인지 정리했다."
 ---
 

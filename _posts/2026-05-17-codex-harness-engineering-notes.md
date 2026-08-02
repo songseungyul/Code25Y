@@ -2,7 +2,8 @@
 layout: post
 title: "하네스 엔지니어링이 왜 중요한가: Codex 기준으로 다시 정리한 구조와 실전 흐름"
 date: 2026-05-17 18:49:04 +0900
-categories: [study, notes]
+categories: [study]
+tags: [codex, harness-engineering, ai-workflow]
 excerpt: "개발동생의 Codex 마스터 클래스 영상을 바탕으로, 프롬프트만으로 부족한 AI 개발 흐름을 어떻게 규칙·메모리·스킬·MCP·훅·서브 에이전트로 보완하는지 공부용 메모로 정리했다."
 ---
 

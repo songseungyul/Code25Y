@@ -2,7 +2,8 @@
 layout: post
 title: "hermes-desktop 저장소를 읽고 정리한 메모: Hermes를 위한 GUI는 어디까지 왔나"
 date: 2026-05-16 14:54:48 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, ai-agent, hermes]
 excerpt: "fathah/hermes-desktop 저장소와 README, 실제 코드 구조를 함께 보며 Hermes Agent용 데스크톱 앱이 무엇을 해결하려는지 정리했다."
 ---
 

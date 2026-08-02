@@ -2,27 +2,73 @@
 layout: default
 ---
 
+{% assign words = content | strip_html | number_of_words %}
+{% assign reading_time = words | divided_by: 500.0 | ceil %}
+{% if reading_time < 1 %}{% assign reading_time = 1 %}{% endif %}
+
 <article class="post-shell container">
-  <div class="post-header-block">
+  <header class="post-header-block">
     <p class="eyebrow">{{ page.categories | join: ' / ' }}</p>
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-header-meta">{{ page.date | date: "%Y.%m.%d" }} · {{ site.title }}</p>
+    <p class="post-header-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      · {{ site.title }}
+      · 예상 읽기 {{ reading_time }}분
+    </p>
+    {% if page.tags and page.tags.size > 0 %}
+      <ul class="post-tag-list" aria-label="태그">
+        {% for tag in page.tags %}
+          <li><a href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  <div class="post-content prose">
+    {{ content }}
   </div>
 
-  <div class="post-layout-grid">
-    <aside class="post-aside">
-      <div class="post-aside-card">
-        <p class="panel-label">Reading Focus</p>
-        <ul>
-          <li>핵심 맥락</li>
-          <li>실무 적용 포인트</li>
-          <li>다음에 다시 쓸 기준</li>
-        </ul>
-      </div>
-    </aside>
+  <nav class="post-pager" aria-label="이전 다음 글">
+    {% if page.previous %}
+      <a class="post-pager-item post-pager-prev" href="{{ page.previous.url | relative_url }}" rel="prev">
+        <span class="post-pager-label">이전 글</span>
+        <span class="post-pager-title">{{ page.previous.title }}</span>
+      </a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+      <a class="post-pager-item post-pager-next" href="{{ page.next.url | relative_url }}" rel="next">
+        <span class="post-pager-label">다음 글</span>
+        <span class="post-pager-title">{{ page.next.title }}</span>
+      </a>
+    {% else %}<span></span>{% endif %}
+  </nav>
 
-    <div class="post-content prose">
-      {{ content }}
-    </div>
-  </div>
+  {% assign related = '' | split: '' %}
+  {% if page.tags and page.tags.size > 0 %}
+    {% for other in site.posts %}
+      {% if other.url == page.url %}{% continue %}{% endif %}
+      {% assign shared = 0 %}
+      {% for tag in page.tags %}
+        {% if other.tags contains tag %}{% assign shared = shared | plus: 1 %}{% endif %}
+      {% endfor %}
+      {% if shared > 0 %}
+        {% assign related = related | push: other %}
+      {% endif %}
+    {% endfor %}
+    {% assign related = related | slice: 0, 4 %}
+  {% endif %}
+
+  {% if related.size > 0 %}
+    <section class="post-related" aria-labelledby="related-title">
+      <h2 id="related-title" class="post-related-title">관련 글</h2>
+      <ul class="post-related-list">
+        {% for other in related %}
+          <li>
+            <a href="{{ other.url | relative_url }}">{{ other.title }}</a>
+            <span class="post-related-date">{{ other.date | date: "%Y.%m.%d" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
 </article>

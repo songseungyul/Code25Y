@@ -2,7 +2,8 @@
 layout: post
 title: "달러는 어떻게 힘을 유지하나: 페트로달러에서 스테이블코인 가설까지 쉽게 정리"
 date: 2026-05-18 07:36:36 +0900
-categories: [study, notes]
+categories: [study]
+tags: [economy, stablecoin, macro]
 excerpt: "머니인사이드 영상의 큰 가설을 따라가며, 달러 패권을 금·석유·국채·결제망 관점에서 다시 정리하고, 스테이블코인이 왜 새로운 달러 인프라로 거론되는지 쉽게 풀어봤다."
 ---
 

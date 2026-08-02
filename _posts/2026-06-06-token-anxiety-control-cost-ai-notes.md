@@ -2,7 +2,8 @@
 layout: post
 title: "AI 시대의 진짜 비용은 토큰값보다 통제 비용일 수 있다는 말이 남았다"
 date: 2026-06-06 20:45:31 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-workflow, essay, cost]
 excerpt: "중앙일보 칼럼 ‘토큰 불안증, AI 시대의 통제 비용’을 바탕으로, AI 에이전트를 더 많이 돌릴수록 왜 사람의 감시·검증·개입 비용이 커지는지 정리해 두었다."
 ---
 

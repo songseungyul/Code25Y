@@ -9,8 +9,29 @@ lang: ko-KR
 timezone: Asia/Seoul
 theme: minima
 markdown: kramdown
+kramdown:
+  toc_levels: "2..3"
+  auto_ids: true
+  syntax_highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 minima:
   skin: auto
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - post-template.md
+  - vendor
+  - .bundle
+  - node_modules
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post

@@ -2,7 +2,8 @@
 layout: post
 title: "LLM Wiki의 본질은 저장이 아니라 검색 계약이다: llm-wiki-anatomy 읽기"
 date: 2026-07-08 09:40:13 +0900
-categories: [study, notes]
+categories: [study]
+tags: [llm-wiki, repo-notes, knowledge-management]
 excerpt: "GitHub 저장소 llm-wiki-anatomy를 읽고, 왜 LLM Wiki를 단순한 옵시디언 그래프나 요약 저장소가 아니라 ‘검색 계약’으로 봐야 하는지, 그리고 같은 지식을 6가지 방식으로 물질화하는 관점을 자세히 정리했다."
 ---
 

@@ -2,7 +2,8 @@
 layout: post
 title: "microsoft/skill-recorder를 읽고 정리한 메모: 사람이 한 번 한 일을 에이전트용 스킬로 바꾸는 방식"
 date: 2026-08-02 14:46:33 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, skill, microsoft]
 excerpt: "microsoft/skill-recorder 저장소의 README, INSTALL, Windows 검증 문서, evals 구조를 읽고 이 프로젝트가 무엇을 만들려는지와 왜 흥미로운지 정리했다."
 ---
 

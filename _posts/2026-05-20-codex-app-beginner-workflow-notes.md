@@ -2,7 +2,8 @@
 layout: post
 title: "Codex 앱은 채팅이 아니라 작업 폴더를 맡기는 도구라는 점이 핵심이었다"
 date: 2026-05-20 09:28:00 +0900
-categories: [study, notes]
+categories: [study]
+tags: [codex, ai-workflow]
 excerpt: "유튜브 영상 'ChatGPT만 쓰면 손해입니다. Codex 쓰세요! (초보자 튜토리얼)'를 보고, Codex를 단순 채팅 도구가 아니라 프로젝트 폴더·기준 문서·계획·검수 중심으로 쓰는 흐름을 다시 정리했다."
 ---
 

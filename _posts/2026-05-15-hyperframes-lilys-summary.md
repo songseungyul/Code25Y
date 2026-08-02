@@ -2,7 +2,8 @@
 layout: post
 title: "Hyperframes 정리: AI가 영상 편집의 진입 장벽을 얼마나 낮출 수 있을까"
 date: 2026-05-15 14:00:00 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-tool, hyperframes, video-tool]
 excerpt: "lilys.ai의 Hyperframes 관련 리포트를 바탕으로 핵심 기능, 설정 방법, 활용 사례를 다시 정리했다."
 ---
 

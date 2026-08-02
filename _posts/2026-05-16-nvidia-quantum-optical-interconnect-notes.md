@@ -2,7 +2,8 @@
 layout: post
 title: "엔비디아, 양자컴퓨터, 광통신: 영상 하나로 다시 정리한 연결 구조"
 date: 2026-05-16 10:04:42 +0900
-categories: [study, notes]
+categories: [study]
+tags: [hardware, nvidia, quantum, investment]
 excerpt: "언더스탠딩 영상 자막과 공식 자료를 함께 보며, 엔비디아·양자컴퓨팅·광통신이 어떻게 하나의 투자 내러티브로 묶이는지 정리했다."
 ---
 

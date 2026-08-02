@@ -2,8 +2,10 @@
 layout: post
 title: "마크다운보다 HTML이 더 잘 읽힌다: Anthropic 엔지니어와 Karpathy가 같이 던진 메시지 정리"
 date: 2026-05-17 18:15:43 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-workflow, output-format]
 excerpt: "AgentOS 영상을 바탕으로, 왜 AI가 만든 긴 마크다운보다 HTML 결과물이 더 읽히고 더 상호작용적이며 더 실무적인지 공부용 메모로 다시 정리했다."
+featured: true
 ---
 
 ## 한 줄 요약

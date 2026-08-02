@@ -2,8 +2,10 @@
 layout: post
 title: "루프 엔지니어링과 그래프 엔지니어링: 에이전트를 ‘반복’으로 볼지, ‘조직’으로 볼지"
 date: 2026-08-01 12:55:00 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-agent, ai-workflow, architecture]
 excerpt: "루프 엔지니어링과 그래프 엔지니어링은 AI 에이전트를 더 잘 일하게 만드는 두 가지 시각이다. 하나는 반복 루프를 설계하는 일이고, 다른 하나는 여러 루프와 역할을 연결한 구조를 설계하는 일이다."
+featured: true
 ---
 
 ## 한 줄 요약

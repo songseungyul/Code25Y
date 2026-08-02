@@ -2,7 +2,8 @@
 layout: post
 title: "Google AI Studio가 브라우저 안에서 안드로이드 앱까지 만드는 흐름을 열고 있었다"
 date: 2026-05-22 01:16:00 +0900
-categories: [study, notes]
+categories: [study]
+tags: [google, ai-tool, android]
 excerpt: "Threads에서 본 Google AI Studio 관련 짧은 글을 출발점으로, 실제로 확인된 변화가 무엇인지 공식 문서와 블로그를 바탕으로 다시 정리했다. 핵심은 브라우저 안에서 네이티브 안드로이드 앱 제작, Google Workspace 연동, 모바일 확장까지 한 흐름으로 묶이고 있다는 점이다."
 ---
 

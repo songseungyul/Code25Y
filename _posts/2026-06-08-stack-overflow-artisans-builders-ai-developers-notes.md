@@ -2,7 +2,8 @@
 layout: post
 title: "AI 시대에 더 가치 있는 개발자는 장인성과 빌드 속도를 함께 가진 사람이라는 말이 남았다"
 date: 2026-06-08 17:17:38 +0900
-categories: [study, notes]
+categories: [study]
+tags: [career, developer-role, essay]
 excerpt: "Stack Overflow 블로그 글 ‘In an AI world, the most valuable developers will be both artisans and builders’를 바탕으로, AI가 코딩 장벽을 낮춘 시대에 왜 개발자의 장인성·판단력·취향이 더 중요해지는지 한국어로 정리해 두었다."
 ---
 

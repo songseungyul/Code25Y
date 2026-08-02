@@ -2,7 +2,8 @@
 layout: post
 title: "‘클로드 디자인 말고 코덱스에서 Open Design’이라는 말이 왜 나오는지 자세히 정리"
 date: 2026-05-22 01:34:37 +0900
-categories: [study, notes]
+categories: [study]
+tags: [claude-design, codex, open-design, ai-workflow]
 excerpt: "Threads에서 본 '클로드 디자인 사용하지 말고 코덱스에서 OpenDesign을 써보라'는 짧은 문장을 출발점으로, Claude Design·Codex·Open Design의 실제 관계와 차이를 공식 자료와 프로젝트 문서를 바탕으로 다시 정리했다."
 ---
 

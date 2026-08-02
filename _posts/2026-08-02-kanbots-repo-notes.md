@@ -2,7 +2,8 @@
 layout: post
 title: "leodavinci1/kanbots를 읽고 정리한 메모: 칸반 보드 자체가 멀티 에이전트 작업실이 되는 방식"
 date: 2026-08-02 14:54:19 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, ai-agent, kanban, orchestration]
 excerpt: "leodavinci1/kanbots 저장소의 README와 architecture, agents 문서를 읽고, 이 프로젝트가 왜 단순 칸반 앱이 아니라 에이전트 오케스트레이션 UI에 가까운지 정리했다."
 ---
 

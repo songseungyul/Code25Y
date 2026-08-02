@@ -12,14 +12,14 @@ layout: default
       </p>
 
       <div class="cta-row">
-        <a class="text-cta" href="#topics">기록 방식 보기</a>
-        <a class="text-cta" href="#recommended">먼저 읽어볼 글</a>
-        <a class="text-cta" href="{{ '/about/' | relative_url }}">블로그 소개 보기</a>
+        <a class="text-cta" href="{{ '/study/' | relative_url }}">공부한 글 보기</a>
+        <a class="text-cta" href="{{ '/tags/' | relative_url }}">태그로 둘러보기</a>
+        <a class="text-cta" href="{{ '/about/' | relative_url }}">블로그 소개</a>
       </div>
     </div>
 
     <figure class="hero-visual-card">
-      <img src="{{ '/assets/images/hero-learning-archive.svg' | relative_url }}" alt="코드와 마크다운 노트를 함께 보며 AI를 공부하고 기록하는 개발자의 작업 공간 일러스트" class="hero-visual" />
+      <img src="{{ '/assets/images/hero-learning-archive.svg' | relative_url }}" alt="코드와 마크다운 노트를 함께 보며 AI를 공부하고 기록하는 개발자의 작업 공간 일러스트" class="hero-visual" width="480" height="360" />
     </figure>
   </div>
 </section>
@@ -32,38 +32,55 @@ layout: default
   </div>
 </section>
 
-<section class="section section-tight" id="about-preview">
-  <div class="container narrow">
-    <div class="profile-card">
-      <figure class="profile-figure">
-        <img
-          src="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}"
-          alt="Code25Y를 운영하는 Song seung yul의 초상 일러스트"
-          class="profile-image"
-        />
-      </figure>
-
-      <div class="profile-copy-block">
-        <p class="eyebrow">소개</p>
-        <h2 class="section-title profile-title">안녕하세요, Song seung yul입니다</h2>
-        <p class="profile-copy">
-          Code25Y는 제가 공부한 것, 다시 보고 싶은 것, 다음에 공부할 것을
-          마크다운으로 오래 남겨 두기 위해 운영하는 개인 학습 아카이브입니다.
-        </p>
-        <p class="profile-copy">
-          완성된 결과만 모으기보다, 배우는 과정과 시행착오까지 다시 꺼내 볼 수 있게
-          정리해 두는 쪽을 더 중요하게 생각합니다.
-        </p>
-
-        <ul class="profile-points">
-          <li>개발 공부 노트</li>
-          <li>AI·자동화 학습 기록</li>
-          <li>도구 사용법과 작업 메모</li>
-        </ul>
-
-        <p class="topic-link profile-link"><a href="{{ '/about/' | relative_url }}">소개 페이지 자세히 보기</a></p>
+{% assign featured_posts = site.posts | where: "featured", true | slice: 0, 5 %}
+{% if featured_posts.size > 0 %}
+  <section class="section" id="featured">
+    <div class="container narrow">
+      <div class="section-heading-stack">
+        <p class="eyebrow">추천 글</p>
+        <h2 class="section-title">먼저 읽어보면 좋은 글</h2>
       </div>
+
+      <ul class="archive-list compact-archive-list">
+        {% for post in featured_posts %}
+          <li class="archive-item">
+            <p class="archive-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+              {% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}
+            </p>
+            <h3 class="archive-title compact-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.excerpt %}
+              <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+  </section>
+{% endif %}
+
+<section class="section" id="recent-posts">
+  <div class="container narrow">
+    <div class="section-heading-stack">
+      <p class="eyebrow">최신 기록</p>
+      <h2 class="section-title">최신 글</h2>
+    </div>
+
+    <ul class="archive-list compact-archive-list">
+      {% assign recent_posts = site.posts | slice: 0, 8 %}
+      {% for post in recent_posts %}
+        <li class="archive-item">
+          <p class="archive-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            {% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}
+          </p>
+          <h3 class="archive-title compact-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          {% if post.excerpt %}
+            <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
@@ -76,132 +93,50 @@ layout: default
 
     <div class="topic-grid">
       <article class="topic-card">
-        <p class="topic-status">기록 중</p>
+        <p class="topic-status">지금까지의 학습 기록</p>
         <h3>공부한 것</h3>
         <p>읽고 이해한 개념과 직접 해본 내용을 간결하게 정리합니다.</p>
-        <p class="topic-highlight">핵심 · 나중에 다시 봐도 이해되는 학습 기록</p>
         <p class="topic-link"><a href="{{ '/study/' | relative_url }}">Study 아카이브 보기</a></p>
       </article>
 
       <article class="topic-card">
-        <p class="topic-status">계속 추가 예정</p>
+        <p class="topic-status">앞으로 볼 것</p>
         <h3>공부할 것</h3>
         <p>다음에 깊게 볼 주제와 궁금한 개념을 미리 적어 둡니다.</p>
-        <p class="topic-highlight">핵심 · 다음 학습으로 이어지는 준비 노트</p>
         <p class="topic-link"><a href="{{ '/to-study/' | relative_url }}">To Study 목록 보기</a></p>
       </article>
 
       <article class="topic-card">
-        <p class="topic-status">함께 기록</p>
-        <h3>작업 메모</h3>
-        <p>작업 중 떠오른 생각과 정리 전 메모를 함께 기록합니다.</p>
-        <p class="topic-highlight">핵심 · 학습 과정의 흐름과 맥락 보존</p>
-        <p class="topic-link"><a href="{{ '/notes/' | relative_url }}">Notes 모아보기</a></p>
+        <p class="topic-status">주제로 탐색</p>
+        <h3>태그</h3>
+        <p>모든 글을 세부 주제·제품·유형별 태그로 볼 수 있습니다.</p>
+        <p class="topic-link"><a href="{{ '/tags/' | relative_url }}">태그 페이지 보기</a></p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section" id="recommended">
+<section class="section section-tight" id="about-preview">
   <div class="container narrow">
-    <div class="section-heading-stack">
-      <p class="eyebrow">추천 글</p>
-      <h2 class="section-title">먼저 읽어보면 좋은 글</h2>
-    </div>
+    <div class="profile-card">
+      <figure class="profile-figure">
+        <img
+          src="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}"
+          alt="Code25Y를 운영하는 Song seung yul의 초상 일러스트"
+          class="profile-image"
+          loading="lazy"
+        />
+      </figure>
 
-    <ul class="link-list">
-      {% assign latest_posts = site.posts | slice: 0, 5 %}
-      {% for post in latest_posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section" id="recent-posts">
-  <div class="container narrow">
-    <div class="section-heading-stack">
-      <p class="eyebrow">최신 기록</p>
-      <h2 class="section-title">최신 글</h2>
-    </div>
-
-    <ul class="archive-list compact-archive-list">
-      {% assign recent_posts = site.posts | slice: 0, 6 %}
-      {% for post in recent_posts %}
-        <li class="archive-item">
-          <p class="archive-meta">{{ post.date | date: "%Y.%m.%d" }} · {{ post.categories | join: " / " }}</p>
-          <h3 class="archive-title compact-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          {% if post.excerpt %}
-            <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="section" id="category-collections">
-  <div class="container narrow">
-    <div class="section-heading-stack">
-      <p class="eyebrow">카테고리 모음</p>
-      <h2 class="section-title">카테고리별로 바로 보기</h2>
-    </div>
-
-    <div class="collection-grid">
-      <article class="collection-card">
-        <div class="collection-header">
-          <h3>공부한 것</h3>
-          <a class="collection-more" href="{{ '/study/' | relative_url }}">전체 보기</a>
-        </div>
-        <ul class="mini-list">
-          {% assign study_posts = site.posts | where_exp: "post", "post.categories contains 'study'" | slice: 0, 3 %}
-          {% if study_posts.size > 0 %}
-            {% for post in study_posts %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li class="muted-item">아직 공부한 것 글이 없습니다.</li>
-          {% endif %}
-        </ul>
-      </article>
-
-      <article class="collection-card">
-        <div class="collection-header">
-          <h3>공부할 것</h3>
-          <a class="collection-more" href="{{ '/to-study/' | relative_url }}">전체 보기</a>
-        </div>
-        <ul class="mini-list">
-          {% assign todo_posts = site.posts | where_exp: "post", "post.categories contains 'todo-study'" | slice: 0, 3 %}
-          {% if todo_posts.size > 0 %}
-            {% for post in todo_posts %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li class="muted-item">아직 공부할 것 글이 없습니다.</li>
-          {% endif %}
-        </ul>
-      </article>
-
-      <article class="collection-card">
-        <div class="collection-header">
-          <h3>작업 메모</h3>
-          <a class="collection-more" href="{{ '/notes/' | relative_url }}">전체 보기</a>
-        </div>
-        <ul class="mini-list">
-          {% assign note_posts = site.posts | where_exp: "post", "post.categories contains 'notes'" | slice: 0, 3 %}
-          {% if note_posts.size > 0 %}
-            {% for post in note_posts %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          {% else %}
-            <li class="muted-item">아직 작업 메모 글이 없습니다.</li>
-          {% endif %}
-        </ul>
-      </article>
+      <div class="profile-copy-block">
+        <p class="eyebrow">소개</p>
+        <h2 class="section-title profile-title">안녕하세요, Song seung yul입니다</h2>
+        <p class="profile-copy">
+          Code25Y는 제가 공부한 것, 다시 보고 싶은 것, 다음에 공부할 것을
+          마크다운으로 오래 남겨 두기 위해 운영하는 개인 학습 아카이브입니다.
+        </p>
+        <p class="topic-link profile-link"><a href="{{ '/about/' | relative_url }}">소개 페이지 자세히 보기</a></p>
+      </div>
     </div>
   </div>
 </section>
-
-

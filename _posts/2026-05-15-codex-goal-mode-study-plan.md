@@ -2,7 +2,8 @@
 layout: post
 title: "Codex /goal 공부 메모: 며칠씩 굴러가는 에이전트를 만들기 전에 더 공부할 것"
 date: 2026-05-15 21:09:14 +0900
-categories: [todo-study, notes]
+categories: [todo-study]
+tags: [codex, ai-agent, harness-engineering]
 excerpt: "Codex /goal 모드를 다룬 영상을 보고, 명확한 목표 설정·짧은 피드백 루프·외부 메모리 설계라는 세 가지 포인트를 중심으로 더 공부할 내용을 정리했다."
 ---
 

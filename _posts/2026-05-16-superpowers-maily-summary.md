@@ -2,7 +2,8 @@
 layout: post
 title: "Superpowers 정리: AI에게 바로 코딩시키지 않고 먼저 기획서부터 쓰게 만드는 방법"
 date: 2026-05-16 20:30:44 +0900
-categories: [study, notes]
+categories: [study]
+tags: [ai-workflow, spec-driven, superpowers]
 excerpt: "Maily의 Product Makers Note 글과 Superpowers 공식 README를 함께 보며, 왜 스펙 주도 개발이 AI 코딩 시대에 더 중요해지는지 정리했다."
 ---
 
