@@ -10,11 +10,14 @@ layout: default
   <header class="post-header-block">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-header-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
       · 예상 읽기 {{ reading_time }}분
     </p>
     {% if page.tags and page.tags.size > 0 %}
       <ul class="post-tag-list" aria-label="태그">
+        {% if page.categories and page.categories.size > 0 %}
+          <li><span class="post-kind-badge">{{ page.categories.first }}</span></li>
+        {% endif %}
         {% for tag in page.tags %}
           <li><a href="{{ '/tags/#' | append: tag | relative_url }}">{{ tag }}</a></li>
         {% endfor %}

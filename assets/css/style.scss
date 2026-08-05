@@ -19,6 +19,9 @@
   --accent: #2563eb;
   --accent-soft: #eff6ff;
   --accent-line: #bfdbfe;
+  --lab-surface: #f5faff;
+  --lab-border: rgba(37, 99, 235, 0.18);
+  --lab-glow: rgba(37, 99, 235, 0.08);
 
   --code-bg: #fafafa;
   --code-border: #e4e4e7;
@@ -53,6 +56,9 @@ html[data-theme='dark'] {
   --accent: #60a5fa;
   --accent-soft: #101c2e;
   --accent-line: #1e3a5f;
+  --lab-surface: #0d1624;
+  --lab-border: rgba(96, 165, 250, 0.24);
+  --lab-glow: rgba(96, 165, 250, 0.12);
 
   --code-bg: #101012;
   --code-border: #232327;
@@ -414,11 +420,61 @@ time,
   color: var(--faint);
 }
 
+.log-tags span,
+.tag-chip,
+.post-tag-list a,
+.filter-chip,
+.post-kind-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.log-tags span::before,
+.tag-chip::before,
+.post-tag-list a::after,
+.filter-chip::before,
+.post-kind-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--lab-glow), transparent);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  pointer-events: none;
+}
+
+.log-tags span:hover::before,
+.tag-chip:hover::before,
+.post-tag-list a:hover::after,
+.filter-chip:hover::before,
+.post-kind-badge:hover::before {
+  opacity: 1;
+}
+
 .log-tags span {
-  padding: 0.05rem 0.35rem;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  background: var(--bg-subtle);
+  padding: 0.18rem 0.48rem;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  background: var(--lab-surface);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.signal-kind {
+  color: var(--accent);
+  border-color: var(--accent-line) !important;
+  background: var(--accent-soft) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signal-kind::before {
+  content: 'LOG';
+  margin-right: 0.42rem;
+  color: var(--faint);
+}
+
+.signal-tag {
+  color: var(--muted);
 }
 
 .log-excerpt {
@@ -780,26 +836,50 @@ time,
 .post-tag-list a {
   min-height: 2.25rem;
   padding: 0.4rem 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  background: var(--bg-subtle);
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  background: var(--lab-surface);
   display: inline-flex;
   align-items: center;
   font-family: var(--mono);
   font-size: 0.6875rem;
   color: var(--muted);
-  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease, transform 0.12s ease;
 }
 
 .post-tag-list a::before {
   content: '#';
   color: var(--faint);
+  margin-right: 0.1rem;
 }
 
 .post-tag-list a:hover {
   color: var(--accent);
   border-color: var(--accent-line);
   background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.post-kind-badge {
+  min-height: 2.25rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-kind-badge::after {
+  content: 'LOG';
+  margin-right: 0.42rem;
+  color: var(--faint);
+  order: -1;
 }
 
 /* ---------- 글 하단 내비 ---------- */
@@ -1154,20 +1234,21 @@ time,
   align-items: center;
   gap: 0.35rem;
   min-height: 2.5rem;
-  padding: 0.42rem 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  background: var(--bg-subtle);
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  background: var(--lab-surface);
   font-family: var(--mono);
   font-size: 0.6875rem;
   color: var(--muted);
-  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease, transform 0.12s ease;
 }
 
 .tag-chip:hover {
   color: var(--accent);
   border-color: var(--accent-line);
   background: var(--accent-soft);
+  transform: translateY(-1px);
 }
 
 .tag-count {
@@ -1238,9 +1319,9 @@ time,
 .filter-chip {
   min-height: 2.75rem;
   padding: 0.45rem 0.8rem;
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  background: var(--bg-subtle);
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  background: var(--lab-surface);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1252,14 +1333,16 @@ time,
 }
 
 .filter-chip:hover {
-  color: var(--text);
-  border-color: var(--border-strong);
+  color: var(--accent);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
 }
 
 .filter-chip.is-active {
-  color: var(--bg);
-  background: var(--text);
-  border-color: var(--text);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  box-shadow: 0 0 0 1px var(--lab-border), 0 0 0 4px var(--lab-glow);
 }
 
 .search-help,
