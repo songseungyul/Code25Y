@@ -2,7 +2,8 @@
 layout: post
 title: "Threads에서 본 impeccable 정리: AI가 만든 촌스러운 UI를 줄이기 위한 디자인 가이드"
 date: 2026-08-06 01:43:40 +0900
-categories: [study, notes]
+categories: [study]
+tags: [repo-notes, ai-tool, frontend, design]
 excerpt: "Threads에서 본 impeccable 소개 글을 출발점으로, GitHub README와 공식 안내를 바탕으로 이 프로젝트가 단순한 '예쁜 화면 생성기'가 아니라 AI 코딩 에이전트에 붙이는 디자인 가이드·명령 세트·검사 도구라는 점을 다시 정리했다."
 ---
 
