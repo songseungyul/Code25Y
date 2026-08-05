@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}" />
     <script>
       (function () {
@@ -17,12 +17,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     {% seo %}
     {%- feed_meta -%}
   </head>
-  <body>
+  <body{% if page.layout == 'memoir' or page.memoir_scope %} class="memoir-scope"{% endif %}>
     <a class="skip-link" href="#main">본문 바로가기</a>
     <header class="site-header">
       <div class="container header-row">
@@ -31,13 +33,15 @@
           <p class="brand-tagline">배움은 지나가도 기록은 남습니다</p>
         </div>
         <nav class="nav-links" aria-label="주 메뉴">
-          <a href="{{ '/' | relative_url }}">홈</a>
-          <a href="{{ '/about/' | relative_url }}">소개</a>
-          <a href="{{ '/search/' | relative_url }}">검색</a>
-          <a href="{{ '/tags/' | relative_url }}">태그</a>
-          <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS 피드">RSS</a>
-          <a href="https://github.com/songseungyul/Code25Y">GitHub</a>
-          <button class="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false" title="다크 모드로 전환">🌙</button>
+          {% assign nav_items = "/,기록|/hospital-it-26y/,회고|/tags/,태그|/search/,검색|/about/,소개" | split: "|" %}
+          {% for item in nav_items %}
+            {% assign parts = item | split: "," %}
+            {% assign path = parts[0] %}
+            {% assign label = parts[1] %}
+            <a href="{{ path | relative_url }}"{% if page.url == path %} aria-current="page"{% endif %}>{{ label }}</a>
+          {% endfor %}
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+          <button class="theme-toggle" type="button" aria-label="다크 모드로 전환" aria-pressed="false" title="다크 모드로 전환">◑</button>
         </nav>
       </div>
     </header>
@@ -49,7 +53,7 @@
     <footer class="site-footer">
       <div class="container footer-row">
         <p>{{ site.title }} · 다시 꺼내 볼 수 있는 공부 기록을 남깁니다.</p>
-        <p><a href="https://github.com/songseungyul">GitHub</a></p>
+        <p><a href="https://github.com/songseungyul/Code25Y">GitHub</a></p>
       </div>
     </footer>
     <script>
@@ -64,7 +68,7 @@
           toggle.setAttribute('aria-pressed', String(isDark));
           toggle.setAttribute('aria-label', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
           toggle.setAttribute('title', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
-          toggle.textContent = isDark ? '☀️' : '🌙';
+          toggle.textContent = isDark ? '◐' : '◑';
         }
 
         var savedTheme = localStorage.getItem('theme');
@@ -86,7 +90,7 @@
     </script>
     <script>
       (function () {
-        var images = document.querySelectorAll('.prose img, .profile-image');
+        var images = document.querySelectorAll('.prose img, .memoir-body img, .profile-image');
         images.forEach(function (img) {
           if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
           if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');

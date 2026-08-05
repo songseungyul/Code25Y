@@ -8,17 +8,15 @@ layout: default
 
 <article class="post-shell container">
   <header class="post-header-block">
-    <p class="eyebrow">{{ page.categories | join: ' / ' }}</p>
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-header-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
-      · {{ site.title }}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
       · 예상 읽기 {{ reading_time }}분
     </p>
     {% if page.tags and page.tags.size > 0 %}
       <ul class="post-tag-list" aria-label="태그">
         {% for tag in page.tags %}
-          <li><a href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a></li>
+          <li><a href="{{ '/tags/#' | append: tag | relative_url }}">{{ tag }}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
@@ -28,24 +26,42 @@ layout: default
     {{ content }}
   </div>
 
-  <nav class="post-pager" aria-label="이전 다음 글">
-    {% if page.previous %}
-      <a class="post-pager-item post-pager-prev" href="{{ page.previous.url | relative_url }}" rel="prev">
-        <span class="post-pager-label">이전 글</span>
-        <span class="post-pager-title">{{ page.previous.title }}</span>
-      </a>
-    {% else %}<span></span>{% endif %}
-    {% if page.next %}
-      <a class="post-pager-item post-pager-next" href="{{ page.next.url | relative_url }}" rel="next">
-        <span class="post-pager-label">다음 글</span>
-        <span class="post-pager-title">{{ page.next.title }}</span>
-      </a>
-    {% else %}<span></span>{% endif %}
-  </nav>
+  {% assign siblings = site.posts | where_exp: "post", "post.series == nil" %}
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  {% for post in siblings %}
+    {% if post.url == page.url %}
+      {% unless forloop.last %}
+        {% assign idx_older = forloop.index0 | plus: 1 %}
+        {% assign prev_post = siblings[idx_older] %}
+      {% endunless %}
+      {% unless forloop.first %}
+        {% assign idx_newer = forloop.index0 | minus: 1 %}
+        {% assign next_post = siblings[idx_newer] %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% if prev_post or next_post %}
+    <nav class="post-pager" aria-label="이전 다음 글">
+      {% if prev_post %}
+        <a class="post-pager-item" href="{{ prev_post.url | relative_url }}" rel="prev">
+          <span class="post-pager-label">이전 글</span>
+          <span class="post-pager-title">{{ prev_post.title }}</span>
+        </a>
+      {% endif %}
+      {% if next_post %}
+        <a class="post-pager-item" href="{{ next_post.url | relative_url }}" rel="next">
+          <span class="post-pager-label">다음 글</span>
+          <span class="post-pager-title">{{ next_post.title }}</span>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
 
   {% assign related = '' | split: '' %}
   {% if page.tags and page.tags.size > 0 %}
-    {% for other in site.posts %}
+    {% for other in siblings %}
       {% if other.url == page.url %}{% continue %}{% endif %}
       {% assign shared = 0 %}
       {% for tag in page.tags %}

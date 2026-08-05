@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{% assign words = content | strip_html | number_of_words %}
+{% assign reading_time = words | divided_by: 500.0 | ceil %}
+{% if reading_time < 1 %}{% assign reading_time = 1 %}{% endif %}
+
+{% assign episodes = site.posts | where: "series", page.series | sort: "episode" %}
+{% assign prev_ep = nil %}
+{% assign next_ep = nil %}
+{% for ep in episodes %}
+  {% if ep.url == page.url %}
+    {% unless forloop.first %}
+      {% assign idx_prev = forloop.index0 | minus: 1 %}
+      {% assign prev_ep = episodes[idx_prev] %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign idx_next = forloop.index0 | plus: 1 %}
+      {% assign next_ep = episodes[idx_next] %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+
+<article class="memoir-shell container">
+  <header class="memoir-header">
+    <p class="memoir-kicker">
+      병원 IT 26년의 회고{% if page.episode != nil %} · {{ page.episode }}편{% endif %}
+    </p>
+    <h1 class="memoir-title">{{ page.title }}</h1>
+    <p class="memoir-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
+      · 예상 읽기 {{ reading_time }}분
+    </p>
+  </header>
+
+  <div class="memoir-body">
+    {{ content }}
+  </div>
+
+  <nav class="memoir-nav" aria-label="시리즈 이동">
+    {% if prev_ep %}
+      <a class="post-pager-item" href="{{ prev_ep.url | relative_url }}" rel="prev">
+        <span class="post-pager-label">이전 편{% if prev_ep.episode != nil %} · {{ prev_ep.episode }}편{% endif %}</span>
+        <span class="post-pager-title">{{ prev_ep.title }}</span>
+      </a>
+    {% endif %}
+    {% if next_ep %}
+      <a class="post-pager-item" href="{{ next_ep.url | relative_url }}" rel="next">
+        <span class="post-pager-label">다음 편{% if next_ep.episode != nil %} · {{ next_ep.episode }}편{% endif %}</span>
+        <span class="post-pager-title">{{ next_ep.title }}</span>
+      </a>
+    {% endif %}
+    <p class="memoir-backlink"><a href="{{ '/hospital-it-26y/' | relative_url }}">시리즈 전체 목록으로</a></p>
+  </nav>
+</article>

@@ -2,141 +2,91 @@
 layout: default
 ---
 
-<section class="hero hero-reference">
-  <div class="container hero-grid">
-    <div class="hero-copy-block">
-      <p class="eyebrow">기록 아카이브</p>
-      <h1 class="hero-title">배움은 지나가도 기록은 남습니다</h1>
-      <p class="hero-copy">
-        공부한 것과 앞으로 공부할 것을 마크다운으로 차곡차곡 정리합니다.
-      </p>
+{% assign notes = site.posts | where_exp: "post", "post.series == nil" %}
+{% assign memoir_posts = site.posts | where: "series", "hospital-it-26y" %}
+{% comment %} 태그 집계도 학습 기록만 — 회고는 태그 체계 밖에 둔다 {% endcomment %}
+{% assign all_tags = "" %}
+{% for post in notes %}{% for tag in post.tags %}{% assign all_tags = all_tags | append: tag | append: "," %}{% endfor %}{% endfor %}
+{% assign tag_count = all_tags | split: "," | uniq | size %}
 
-      <div class="cta-row">
-        <a class="text-cta" href="{{ '/study/' | relative_url }}">공부한 글 보기</a>
-        <a class="text-cta" href="{{ '/tags/' | relative_url }}">태그로 둘러보기</a>
-        <a class="text-cta" href="{{ '/about/' | relative_url }}">블로그 소개</a>
-      </div>
-    </div>
-
-    <figure class="hero-visual-card">
-      <img src="{{ '/assets/images/hero-learning-archive.svg' | relative_url }}" alt="코드와 마크다운 노트를 함께 보며 AI를 공부하고 기록하는 개발자의 작업 공간 일러스트" class="hero-visual" width="480" height="360" />
-    </figure>
-  </div>
-</section>
-
-<section class="section section-tight">
-  <div class="container narrow intro-block">
-    <p class="intro-copy">
-      흘러가는 정보 대신, 다시 꺼내 볼 수 있는 공부 기록을 남깁니다.
+<section class="home-hero">
+  <div class="container">
+    <h1>배움은 지나가도<br />기록은 남습니다</h1>
+    <p>
+      공부한 것과 앞으로 공부할 것을 마크다운으로 정리해 두는 개인 학습 아카이브입니다.
+      흘러가는 정보 대신, 다시 꺼내 볼 수 있는 기록을 남깁니다.
+    </p>
+    <p class="home-stats">
+      <span><b>{{ notes.size }}</b> 기록</span>
+      <span><b>{{ tag_count }}</b> 태그</span>
+      {% if memoir_posts.size > 0 %}<span><b>{{ memoir_posts.size }}</b> 회고</span>{% endif %}
+      {% if site.posts.first %}<span>최근 <b>{{ site.posts.first.date | date: "%Y.%m.%d" }}</b></span>{% endif %}
     </p>
   </div>
 </section>
 
-{% assign featured_posts = site.posts | where: "featured", true | slice: 0, 5 %}
-{% if featured_posts.size > 0 %}
-  <section class="section" id="featured">
-    <div class="container narrow">
-      <div class="section-heading-stack">
-        <p class="eyebrow">추천 글</p>
-        <h2 class="section-title">먼저 읽어보면 좋은 글</h2>
-      </div>
-
-      <ul class="archive-list compact-archive-list">
-        {% for post in featured_posts %}
-          <li class="archive-item">
-            <p class="archive-meta">
-              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
-              {% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}
-            </p>
-            <h3 class="archive-title compact-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {% if post.excerpt %}
-              <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+{% if memoir_posts.size > 0 %}
+  <section class="section-tight" style="padding-top: 2rem;">
+    <div class="container">
+      <a class="memoir-banner memoir-scope" href="{{ '/hospital-it-26y/' | relative_url }}">
+        <p class="memoir-banner-top">
+          <span class="memoir-banner-badge">Series</span>
+          <span>{{ memoir_posts.size }}편 진행 중</span>
+        </p>
+        <h2 class="memoir-banner-title">병원 IT 26년 — 종이 청구서로 시작해 바이브코딩으로 끝나가는 기록</h2>
+        <p class="memoir-banner-desc">
+          지방 대학병원 IT를 개발자·팀장·본부장으로 지나오며 실제로 만든 시스템들의 기록입니다.
+          학습 노트와는 별도로 이어 갑니다.
+        </p>
+        <p class="memoir-banner-cta">시리즈 보기 →</p>
+      </a>
     </div>
   </section>
 {% endif %}
 
-<section class="section" id="recent-posts">
-  <div class="container narrow">
-    <div class="section-heading-stack">
-      <p class="eyebrow">최신 기록</p>
-      <h2 class="section-title">최신 글</h2>
-    </div>
+<section class="section">
+  <div class="container">
+    <p class="section-label">기록</p>
 
-    <ul class="archive-list compact-archive-list">
-      {% assign recent_posts = site.posts | slice: 0, 8 %}
-      {% for post in recent_posts %}
-        <li class="archive-item">
-          <p class="archive-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
-            {% if post.tags and post.tags.size > 0 %} · {{ post.tags | join: ", " }}{% endif %}
-          </p>
-          <h3 class="archive-title compact-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          {% if post.excerpt %}
-            <p class="archive-excerpt">{{ post.excerpt | strip_html }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+    {% assign grouped = notes | group_by_exp: "post", "post.date | date: '%Y.%m'" %}
+    {% for group in grouped %}
+      <div class="log-group">
+        <div class="log-group-head">
+          <span class="log-group-label">{{ group.name }}</span>
+          <span class="log-group-rule"></span>
+          <span class="log-group-count">{{ group.items.size }}</span>
+        </div>
 
-<section class="section" id="topics">
-  <div class="container narrow">
-    <div class="section-heading-stack">
-      <p class="eyebrow">기록 주제</p>
-      <h2 class="section-title">이 블로그에 쌓는 기록</h2>
-    </div>
-
-    <div class="topic-grid">
-      <article class="topic-card">
-        <p class="topic-status">지금까지의 학습 기록</p>
-        <h3>공부한 것</h3>
-        <p>읽고 이해한 개념과 직접 해본 내용을 간결하게 정리합니다.</p>
-        <p class="topic-link"><a href="{{ '/study/' | relative_url }}">Study 아카이브 보기</a></p>
-      </article>
-
-      <article class="topic-card">
-        <p class="topic-status">앞으로 볼 것</p>
-        <h3>공부할 것</h3>
-        <p>다음에 깊게 볼 주제와 궁금한 개념을 미리 적어 둡니다.</p>
-        <p class="topic-link"><a href="{{ '/to-study/' | relative_url }}">To Study 목록 보기</a></p>
-      </article>
-
-      <article class="topic-card">
-        <p class="topic-status">주제로 탐색</p>
-        <h3>태그</h3>
-        <p>모든 글을 세부 주제·제품·유형별 태그로 볼 수 있습니다.</p>
-        <p class="topic-link"><a href="{{ '/tags/' | relative_url }}">태그 페이지 보기</a></p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-tight" id="about-preview">
-  <div class="container narrow">
-    <div class="profile-card">
-      <figure class="profile-figure">
-        <img
-          src="{{ '/assets/images/profile/song-seung-yul-portrait.jpg' | relative_url }}"
-          alt="Code25Y를 운영하는 Song seung yul의 초상 일러스트"
-          class="profile-image"
-          loading="lazy"
-        />
-      </figure>
-
-      <div class="profile-copy-block">
-        <p class="eyebrow">소개</p>
-        <h2 class="section-title profile-title">안녕하세요, Song seung yul입니다</h2>
-        <p class="profile-copy">
-          Code25Y는 제가 공부한 것, 다시 보고 싶은 것, 다음에 공부할 것을
-          마크다운으로 오래 남겨 두기 위해 운영하는 개인 학습 아카이브입니다.
-        </p>
-        <p class="topic-link profile-link"><a href="{{ '/about/' | relative_url }}">소개 페이지 자세히 보기</a></p>
+        <ul class="log-list">
+          {% for post in group.items %}
+            <li class="log-entry">
+              <time class="log-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }}</time>
+              <div class="log-body">
+                <h3 class="log-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                {% if post.tags and post.tags.size > 0 %}
+                  <p class="log-tags">
+                    {% for tag in post.tags limit: 4 %}<span>{{ tag }}</span>{% endfor %}
+                  </p>
+                {% endif %}
+                {% if post.excerpt %}
+                  <p class="log-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <p class="link-row">
+      <a href="{{ '/tags/' | relative_url }}">태그로 둘러보기</a>
+      <a href="{{ '/to-study/' | relative_url }}">앞으로 공부할 것</a>
+      <a href="{{ '/search/' | relative_url }}">검색</a>
+      <a href="{{ '/about/' | relative_url }}">소개</a>
+    </p>
   </div>
 </section>

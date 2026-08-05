@@ -4,7 +4,8 @@ title: Search
 permalink: /search/
 ---
 
-게시된 글을 제목, 요약, 카테고리, 태그 기준으로 검색할 수 있습니다.
+학습 기록을 제목, 요약, 카테고리, 태그 기준으로 검색할 수 있습니다.
+회고 시리즈는 [별도 페이지]({{ '/hospital-it-26y/' | relative_url }})에서 순서대로 이어집니다.
 
 <form class="search-shell" role="search" onsubmit="return false">
   <label class="search-label" for="search-input">검색어</label>
@@ -20,7 +21,9 @@ permalink: /search/
   <p id="search-status" class="search-status" aria-live="polite">전체 글을 불러왔습니다.</p>
 
   <ul id="search-results" class="archive-list">
-    {% for post in site.posts %}
+    {% comment %} 회고 시리즈는 제외한다 — 별도 공간으로 분리했다 {% endcomment %}
+    {% assign searchable = site.posts | where_exp: "post", "post.series == nil" %}
+    {% for post in searchable %}
       <li
         class="archive-item search-item"
         data-title="{{ post.title | downcase | escape }}"

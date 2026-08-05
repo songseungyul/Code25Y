@@ -3,10 +3,12 @@ layout: default
 ---
 
 <section class="page-shell container">
-  <div class="page-header-block">
-    <p class="eyebrow">Profile</p>
+  <header class="page-header-block">
     <h1 class="page-title">{{ page.title }}</h1>
-  </div>
+    {% if page.subtitle %}
+      <p class="post-header-meta">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
   <div class="page-content prose">
     {{ content }}
   </div>
