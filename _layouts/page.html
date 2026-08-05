@@ -4,6 +4,7 @@ layout: default
 
 <section class="page-shell container">
   <header class="page-header-block">
+    <p class="eyebrow">{{ page.eyebrow | default: '기록 페이지' }}</p>
     <h1 class="page-title">{{ page.title }}</h1>
     {% if page.subtitle %}
       <p class="post-header-meta">{{ page.subtitle }}</p>

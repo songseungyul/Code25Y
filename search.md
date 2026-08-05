@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Search
+title: 검색
 permalink: /search/
+eyebrow: 찾기
 ---
 
 학습 기록을 제목, 요약, 카테고리, 태그 기준으로 검색할 수 있습니다.
@@ -13,8 +14,8 @@ permalink: /search/
 
   <div class="search-filter-row" role="group" aria-label="카테고리 필터">
     <button type="button" class="filter-chip is-active" data-filter="all" aria-pressed="true">전체</button>
-    <button type="button" class="filter-chip" data-filter="study" aria-pressed="false">Study</button>
-    <button type="button" class="filter-chip" data-filter="todo-study" aria-pressed="false">To Study</button>
+    <button type="button" class="filter-chip" data-filter="study" aria-pressed="false">공부한 것</button>
+    <button type="button" class="filter-chip" data-filter="todo-study" aria-pressed="false">공부할 것</button>
   </div>
 
   <p class="search-help">두 글자 이상 입력하면 제목·요약·카테고리·태그에서 바로 찾습니다.</p>
@@ -71,8 +72,8 @@ permalink: /search/
 
     var filterLabels = {
       all: '전체',
-      study: 'Study',
-      'todo-study': 'To Study'
+      study: '공부한 것',
+      'todo-study': '공부할 것'
     };
 
     var params = new URLSearchParams(window.location.search);

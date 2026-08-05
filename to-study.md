@@ -2,6 +2,7 @@
 layout: page
 title: 앞으로 공부할 것
 permalink: /to-study/
+eyebrow: 앞으로 볼 주제
 ---
 
 앞으로 읽고 싶거나 더 깊게 공부해 보고 싶은 주제를 모아두는 페이지입니다.

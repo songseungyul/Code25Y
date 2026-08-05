@@ -2,6 +2,7 @@
 layout: page
 title: 태그
 permalink: /tags/
+eyebrow: 주제별 탐색
 ---
 
 주제별로 학습 기록을 모아 보는 페이지입니다.
