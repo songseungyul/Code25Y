@@ -4,29 +4,72 @@ layout: default
 
 {% assign notes = site.posts | where_exp: "post", "post.series == nil" %}
 {% assign memoir_posts = site.posts | where: "series", "hospital-it-26y" %}
+{% assign featured_notes = notes | slice: 0, 3 %}
 {% comment %} 태그 집계도 학습 기록만 — 회고는 태그 체계 밖에 둔다 {% endcomment %}
 {% assign all_tags = "" %}
 {% for post in notes %}{% for tag in post.tags %}{% assign all_tags = all_tags | append: tag | append: "," %}{% endfor %}{% endfor %}
 {% assign tag_count = all_tags | split: "," | uniq | size %}
 
-<section class="home-hero">
+<section class="home-hero home-shell">
+  <div class="container home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="home-kicker">Code25Y · personal learning archive</p>
+      <h1>배움이 지나간 자리에<br />다시 꺼내 볼 기록을 남깁니다</h1>
+      <p class="home-summary">
+        AI, 개발, 자동화, 그리고 실제로 부딪히며 배운 것들을 마크다운으로 정리합니다.
+        빠르게 소비되는 정보보다 나중에도 다시 참고할 수 있는 공부 기록을 쌓아 가는 공간입니다.
+      </p>
+      <p class="home-cta-row">
+        <a class="home-primary-link" href="{{ '/search/' | relative_url }}">기록 탐색하기</a>
+        <a class="home-secondary-link" href="{{ '/about/' | relative_url }}">이 블로그 소개</a>
+      </p>
+      <p class="home-stats">
+        <span><b>{{ notes.size }}</b> 기록</span>
+        <span><b>{{ tag_count }}</b> 태그</span>
+        {% if memoir_posts.size > 0 %}<span><b>{{ memoir_posts.size }}</b> 회고</span>{% endif %}
+        {% if site.posts.first %}<span>최근 <b>{{ site.posts.first.date | date: "%Y.%m.%d" }}</b></span>{% endif %}
+      </p>
+    </div>
+
+    <aside class="home-profile-panel">
+      <p class="home-panel-label">About this archive</p>
+      <h2 class="home-panel-title">공부한 것, 만들었던 것, 다시 공부할 것을 한곳에 정리합니다.</h2>
+      <p class="home-panel-text">
+        단발성 링크 저장소가 아니라, 직접 이해하고 다시 설명할 수 있을 때까지 남겨두는 개발자 노트에 가깝습니다.
+      </p>
+      <ul class="home-panel-list plain-list">
+        <li>학습 노트와 실험 기록 중심</li>
+        <li>짧은 감탄보다 재사용 가능한 정리 우선</li>
+        <li>프로젝트와 회고는 별도 흐름으로 분리</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section-tight home-shell">
   <div class="container">
-    <h1>배움은 지나가도<br />기록은 남습니다</h1>
-    <p>
-      공부한 것과 앞으로 공부할 것을 마크다운으로 정리해 두는 개인 학습 아카이브입니다.
-      흘러가는 정보 대신, 다시 꺼내 볼 수 있는 기록을 남깁니다.
-    </p>
-    <p class="home-stats">
-      <span><b>{{ notes.size }}</b> 기록</span>
-      <span><b>{{ tag_count }}</b> 태그</span>
-      {% if memoir_posts.size > 0 %}<span><b>{{ memoir_posts.size }}</b> 회고</span>{% endif %}
-      {% if site.posts.first %}<span>최근 <b>{{ site.posts.first.date | date: "%Y.%m.%d" }}</b></span>{% endif %}
-    </p>
+    <div class="home-focus-grid">
+      <article class="home-focus-card">
+        <p class="home-focus-label">What I keep here</p>
+        <h2>이 블로그에서 주로 보는 것</h2>
+        <p>AI 도구, 개발 워크플로, 자동화, 그리고 실제 업무나 개인 프로젝트에서 써 본 흐름을 정리합니다.</p>
+      </article>
+      <article class="home-focus-card">
+        <p class="home-focus-label">How it is written</p>
+        <h2>어떻게 정리하나</h2>
+        <p>원문 요약에서 멈추지 않고, 가능한 한 공식 자료와 실제 사용 맥락을 함께 묶어 이해 가능한 메모로 남깁니다.</p>
+      </article>
+      <article class="home-focus-card">
+        <p class="home-focus-label">Why it matters</p>
+        <h2>왜 남겨 두나</h2>
+        <p>지식은 빨리 잊히지만 기록은 누적됩니다. 다음에 같은 문제를 만났을 때 바로 다시 꺼내 보기 위해 씁니다.</p>
+      </article>
+    </div>
   </div>
 </section>
 
 {% if memoir_posts.size > 0 %}
-  <section class="section-tight" style="padding-top: 2rem;">
+  <section class="section-tight home-shell">
     <div class="container">
       <a class="memoir-banner memoir-scope" href="{{ '/hospital-it-26y/' | relative_url }}">
         <p class="memoir-banner-top">
@@ -44,9 +87,35 @@ layout: default
   </section>
 {% endif %}
 
-<section class="section">
+<section class="section home-shell">
+  <div class="container home-section-grid">
+    <div class="home-section-head">
+      <p class="section-label">Featured notes</p>
+      <h2 class="section-title home-section-title">먼저 읽어 보면 좋은 최근 기록</h2>
+      <p class="home-section-desc">최근 올린 글 중에서 블로그의 방향이 잘 드러나는 글들을 먼저 배치합니다.</p>
+    </div>
+
+    <div class="home-feature-list">
+      {% for post in featured_notes %}
+        <article class="home-feature-item">
+          <p class="home-feature-meta">{{ post.date | date: "%Y.%m.%d" }}</p>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          {% if post.excerpt %}
+            <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section home-shell">
   <div class="container">
-    <p class="section-label">기록</p>
+    <div class="home-section-head home-section-head--archive">
+      <p class="section-label">Archive</p>
+      <h2 class="section-title home-section-title">전체 기록</h2>
+      <p class="home-section-desc">월별로 묶어 두고, 각 글에서 핵심 태그와 짧은 설명을 함께 보여 줍니다.</p>
+    </div>
 
     {% assign grouped = notes | group_by_exp: "post", "post.date | date: '%Y.%m'" %}
     {% for group in grouped %}
@@ -83,13 +152,26 @@ layout: default
   </div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
-    <p class="link-row">
-      <a href="{{ '/tags/' | relative_url }}">태그로 둘러보기</a>
-      <a href="{{ '/to-study/' | relative_url }}">앞으로 공부할 것</a>
-      <a href="{{ '/search/' | relative_url }}">검색</a>
-      <a href="{{ '/about/' | relative_url }}">소개</a>
-    </p>
+<section class="section-tight home-shell">
+  <div class="container home-bottom-grid">
+    <div class="home-principles-card">
+      <p class="section-label">Principles</p>
+      <h2 class="section-title home-section-title">이 아카이브가 지키려는 기준</h2>
+      <ul class="home-principles-list plain-list">
+        <li>짧게 소비되는 정보보다 오래 참고할 수 있는 기록</li>
+        <li>출처 링크보다 이해한 구조를 남기는 정리</li>
+        <li>배운 것과 앞으로 배울 것을 같은 흐름 안에서 축적</li>
+      </ul>
+    </div>
+
+    <div class="home-links-card">
+      <p class="section-label">Explore</p>
+      <p class="link-row home-link-stack">
+        <a href="{{ '/tags/' | relative_url }}">태그로 둘러보기</a>
+        <a href="{{ '/to-study/' | relative_url }}">앞으로 공부할 것</a>
+        <a href="{{ '/search/' | relative_url }}">검색</a>
+        <a href="{{ '/about/' | relative_url }}">소개</a>
+      </p>
+    </div>
   </div>
 </section>

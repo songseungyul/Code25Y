@@ -294,24 +294,101 @@ time,
 
 /* ---------- 홈 ---------- */
 
+.home-shell {
+  position: relative;
+}
+
+.home-shell + .home-shell {
+  border-top: 1px solid var(--border);
+}
+
 .home-hero {
-  padding: 4rem 0 2.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 4.25rem 0 3rem;
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(18rem, 0.95fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.home-hero-copy {
+  min-width: 0;
+}
+
+.home-kicker,
+.home-panel-label,
+.home-focus-label,
+.home-feature-meta {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
 }
 
 .home-hero h1 {
-  margin: 0 0 0.9rem;
-  font-size: clamp(1.75rem, 4.2vw, 2.4rem);
+  margin: 0.7rem 0 1rem;
+  max-width: 12ch;
+  font-size: clamp(2.3rem, 6vw, 4.1rem);
   font-weight: 650;
-  letter-spacing: -0.035em;
-  line-height: 1.18;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
 }
 
-.home-hero p {
+.home-summary {
   margin: 0;
-  max-width: 34rem;
+  max-width: 39rem;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.home-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  margin: 1.8rem 0 0;
+}
+
+.home-primary-link,
+.home-secondary-link {
+  min-height: 2.75rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  transition: color 0.12s ease, border-color 0.12s ease, background-color 0.12s ease, transform 0.12s ease;
+}
+
+.home-primary-link {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg);
+}
+
+.home-primary-link:hover {
+  transform: translateY(-1px);
+  background: var(--text-soft);
+  border-color: var(--text-soft);
+  color: var(--bg);
+}
+
+.home-secondary-link {
+  color: var(--muted);
+  background: var(--bg);
+}
+
+.home-secondary-link:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+  background: var(--bg-subtle);
 }
 
 .home-stats {
@@ -328,6 +405,130 @@ time,
 .home-stats b {
   color: var(--text-soft);
   font-weight: 500;
+}
+
+.home-profile-panel,
+.home-focus-card,
+.home-principles-card,
+.home-links-card {
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+
+.home-profile-panel {
+  padding: 1.35rem 1.4rem;
+  border-radius: 16px;
+}
+
+.home-panel-title {
+  margin: 0.7rem 0 0.55rem;
+  font-size: 1rem;
+  font-weight: 620;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+}
+
+.home-panel-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.home-panel-list {
+  margin: 1rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.home-panel-list li:last-child {
+  margin-bottom: 0;
+}
+
+.home-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-focus-card {
+  padding: 1.2rem 1.15rem;
+  border-radius: 14px;
+}
+
+.home-focus-card h2 {
+  margin: 0.55rem 0 0.4rem;
+  font-size: 0.9875rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.home-focus-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.home-section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.home-section-head {
+  max-width: 22rem;
+}
+
+.home-section-head--archive {
+  max-width: 34rem;
+  margin-bottom: 1.6rem;
+}
+
+.home-section-title {
+  margin-top: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.home-section-desc {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.home-feature-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.home-feature-item {
+  padding: 1rem 0 1.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.home-feature-item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.home-feature-item h3 {
+  margin: 0.45rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.5;
+}
+
+.home-feature-item h3 a:hover {
+  color: var(--accent);
+}
+
+.home-feature-item p:last-child {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.7;
 }
 
 /* 로그 목록 */
@@ -562,6 +763,34 @@ time,
 
 .link-row a:hover {
   color: var(--accent);
+}
+
+.home-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+  gap: 1rem;
+}
+
+.home-principles-card,
+.home-links-card {
+  padding: 1.25rem 1.2rem;
+  border-radius: 14px;
+}
+
+.home-principles-list {
+  margin: 0.85rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.home-link-stack {
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.home-link-stack a {
+  color: var(--text-soft);
 }
 
 .more-link {
@@ -1502,6 +1731,15 @@ input:focus-visible {
   .brand-tagline {
     display: none;
   }
+  .home-hero-grid,
+  .home-section-grid,
+  .home-bottom-grid,
+  .home-focus-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-section-head {
+    max-width: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1536,7 +1774,11 @@ input:focus-visible {
   .log-date,
   .log-tags,
   .tag-count,
-  .prose figcaption {
+  .prose figcaption,
+  .home-kicker,
+  .home-panel-label,
+  .home-focus-label,
+  .home-feature-meta {
     font-size: 0.75rem;
   }
   .archive-title,
@@ -1546,17 +1788,41 @@ input:focus-visible {
     font-size: 1.125rem;
     line-height: 1.5;
   }
+  .home-hero {
+    padding: 3rem 0 2rem;
+  }
   .home-hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.22;
+    font-size: 2.45rem;
+    line-height: 1.12;
   }
-  .log-group-label {
-    font-size: 0.9375rem;
-  }
+  .home-summary,
+  .home-section-desc,
+  .home-panel-text,
+  .home-feature-item p:last-child,
+  .home-focus-card p:last-child,
+  .home-principles-list,
   .archive-excerpt,
   .log-excerpt {
     font-size: 1.0625rem;
     line-height: 1.74;
+  }
+  .home-focus-card h2,
+  .home-panel-title,
+  .home-feature-item h3,
+  .home-section-title,
+  .archive-title,
+  .log-title {
+    font-size: 1.125rem;
+  }
+  .home-cta-row {
+    gap: 0.65rem;
+  }
+  .home-primary-link,
+  .home-secondary-link {
+    width: 100%;
+  }
+  .log-group-label {
+    font-size: 0.9375rem;
   }
   .log-tags {
     font-size: 0.8125rem;
