@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paseo와 Orca를 어떻게 구분하면 좋을까: GUI형 AI 작업실을 공부용으로 다시 정리"
-date: 2026-08-08 10:30:00 +0900
+date: 2026-08-08 08:20:00 +0900
 categories: [study]
 tags: [ai-tool, ai-agent, workflow, paseo, orca]
 excerpt: "사용자가 공유한 Paseo 소개 글을 출발점으로, 공식 사이트와 공개 README를 함께 보며 Paseo와 Orca를 공부용으로 다시 정리했다. 핵심은 둘 다 단순 AI 채팅 앱이 아니라 여러 코딩 에이전트를 실제 작업 흐름 안에서 관리하는 작업실에 가깝다는 점이다."
