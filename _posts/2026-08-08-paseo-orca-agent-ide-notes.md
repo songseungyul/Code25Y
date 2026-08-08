@@ -38,6 +38,15 @@ excerpt: "사용자가 공유한 Paseo 소개 글을 출발점으로, 공식 사
 
 방향성 자체는 꽤 이해가 됩니다. 다만 공식 자료까지 같이 보면, 이 둘의 차이는 단순히 “GUI 있냐 없냐”보다 **무엇을 더 중심 가치로 두는가**에서 갈리는 것처럼 보였습니다.
 
+<figure>
+  <a href="{{ '/assets/images/posts/2026-08-08-paseo-vs-claude-schedule-comparison.jpg' | relative_url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ '/assets/images/posts/2026-08-08-paseo-vs-claude-schedule-comparison.jpg' | relative_url }}" alt="헤르메스 스케줄과 Claude Code 스케줄의 차이를 비교한 인포그래픽" />
+  </a>
+  <figcaption>
+    출처: 사용자가 공유한 비교 이미지. Hermes Agent 스케줄과 Claude Code /schedule의 차이를 한 장으로 정리한 표.
+  </figcaption>
+</figure>
+
 ## 공식 자료로 다시 확인한 것
 
 ### 1. Paseo는 “에이전트를 직접 돌리는 작업실”이라기보다 “기존 에이전트를 묶어 주는 인터페이스”에 가깝다
