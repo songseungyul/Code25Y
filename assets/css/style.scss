@@ -878,6 +878,18 @@ h4 {
   background: var(--accent-soft);
 }
 
+.post-kind-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
 /* ---------- 글 하단 ---------- */
 
 .post-pager,
