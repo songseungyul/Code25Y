@@ -6,9 +6,9 @@ eyebrow: 주제별 탐색
 ---
 
 주제별로 학습 기록을 모아 보는 페이지입니다.
-회고 시리즈는 [별도 페이지]({{ '/hospital-it-26y/' | relative_url }})에서 이어집니다.
+‘다음 20년’ 시리즈는 [별도 페이지]({{ '/next-20y/' | relative_url }})에서 이어집니다.
 
-{% comment %} 회고 시리즈는 제외한다 — 학습 기록만 태그로 분류한다 {% endcomment %}
+{% comment %} 시리즈 글은 제외한다 — 학습 기록만 태그로 분류한다 {% endcomment %}
 {% assign notes = site.posts | where_exp: "post", "post.series == nil" %}
 
 {% assign rawtags = "" %}

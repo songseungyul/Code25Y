@@ -1,0 +1,16 @@
+# 홈의 주제 축. 각 주제는 태그 묶음으로 정의한다.
+- name: AI와 일하는 법
+  desc: 에이전트·하네스·워크플로. 도구를 쓰는 법보다 일하는 구조를 어떻게 설계할지에 관한 기록.
+  tags: [ai-agent, ai-workflow, harness-engineering, claude-code, claude, codex, orchestration, skill, prompt, spec-driven, ai-tool, agent-view, open-design, claude-design, superpowers, paperclip, kanban, hermes, autopreso, hyperframes, video-tool, dev-tool, terminal, wave-terminal, design, frontend]
+
+- name: 오래 가는 시스템
+  desc: 20년을 버티는 코드와 구조. 레거시를 부채가 아니라 조건으로 보는 관점.
+  tags: [hospital-it, architecture, repo-notes, knowledge-management, knowledge-graph, code-analysis, hwpx, korean-ai, llm-wiki, output-format]
+
+- name: 개발자의 다음 20년
+  desc: 역할이 바뀌는 동안 무엇을 놓지 않을지. 커리어와 판단에 관한 글.
+  tags: [career, developer-role, essay, life, retrospective, systems-thinking, cost, blog-meta]
+
+- name: 지켜보는 판
+  desc: 반도체·전력·자본. 내가 만들지는 않지만 결국 내 일을 결정하는 바깥의 변수들.
+  tags: [hardware, ai-infra, economy, macro, nvidia, openai, energy, memory, ai-chip, quantum, investment, stablecoin, google, android, microsoft]

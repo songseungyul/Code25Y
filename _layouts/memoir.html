@@ -25,7 +25,7 @@ layout: default
 <article class="memoir-shell container">
   <header class="memoir-header">
     <p class="memoir-kicker">
-      병원 IT 26년의 회고{% if page.episode != nil %} · {{ page.episode }}편{% endif %}
+      다음 20년{% if page.episode != nil %} · Q{{ page.episode }}{% endif %}
     </p>
     <h1 class="memoir-title">{{ page.title }}</h1>
     <p class="memoir-meta">
@@ -41,16 +41,16 @@ layout: default
   <nav class="memoir-nav" aria-label="시리즈 이동">
     {% if prev_ep %}
       <a class="post-pager-item" href="{{ prev_ep.url | relative_url }}" rel="prev">
-        <span class="post-pager-label">이전 편{% if prev_ep.episode != nil %} · {{ prev_ep.episode }}편{% endif %}</span>
+        <span class="post-pager-label">이전 질문{% if prev_ep.episode != nil %} · Q{{ prev_ep.episode }}{% endif %}</span>
         <span class="post-pager-title">{{ prev_ep.title }}</span>
       </a>
     {% endif %}
     {% if next_ep %}
       <a class="post-pager-item" href="{{ next_ep.url | relative_url }}" rel="next">
-        <span class="post-pager-label">다음 편{% if next_ep.episode != nil %} · {{ next_ep.episode }}편{% endif %}</span>
+        <span class="post-pager-label">다음 질문{% if next_ep.episode != nil %} · Q{{ next_ep.episode }}{% endif %}</span>
         <span class="post-pager-title">{{ next_ep.title }}</span>
       </a>
     {% endif %}
-    <p class="memoir-backlink"><a href="{{ '/hospital-it-26y/' | relative_url }}">시리즈 전체 목록으로</a></p>
+    <p class="memoir-backlink"><a href="{{ '/next-20y/' | relative_url }}">질문 목록 전체 보기</a></p>
   </nav>
 </article>
