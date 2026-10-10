@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#faf8f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#151816" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}" />
     <script>
       (function () {
@@ -13,13 +13,14 @@
         var systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         var theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
         document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.add('js');
       })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     {% seo %}
     {%- feed_meta -%}
@@ -30,10 +31,10 @@
       <div class="container header-row">
         <div class="brand-group">
           <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-          <p class="brand-tagline">배움은 지나가도 기록은 남습니다</p>
+          <p class="brand-tagline">대학병원 IT 26년차의 기록</p>
         </div>
         <nav class="nav-links" aria-label="주 메뉴">
-          {% assign nav_items = "/,기록|/hospital-it-26y/,회고|/tags/,태그|/search/,검색|/about/,소개" | split: "|" %}
+          {% assign nav_items = "/,기록|/next-20y/,다음 20년|/tags/,태그|/search/,검색|/about/,소개" | split: "|" %}
           {% for item in nav_items %}
             {% assign parts = item | split: "," %}
             {% assign path = parts[0] %}
@@ -52,7 +53,7 @@
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <p>{{ site.title }} · 다시 꺼내 볼 수 있는 공부 기록을 남깁니다.</p>
+        <p>{{ site.title }} · 쌓아온 것보다, 다음에 쓸 것.</p>
         <p><a href="https://github.com/songseungyul/Code25Y">GitHub</a></p>
       </div>
     </footer>
@@ -86,6 +87,24 @@
           if (localStorage.getItem('theme')) return;
           applyTheme(event.matches ? 'dark' : 'light');
         });
+      })();
+    </script>
+    <script>
+      (function () {
+        var items = document.querySelectorAll('.reveal');
+        if (!items.length) return;
+        if (!('IntersectionObserver' in window)) {
+          items.forEach(function (el) { el.classList.add('is-in'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+        items.forEach(function (el) { io.observe(el); });
       })();
     </script>
     <script>
